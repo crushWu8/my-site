@@ -1,0 +1,102 @@
+/* ===== Theme & Base ===== */
+:root{
+  --bg:#000;
+  --text:#e5e5e5;
+  --muted:#cbd5e1;
+  --link:#e5e5e5;
+  --card:#151515;
+  --border:#2a2a2a;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:var(--text);
+  font-family: Georgia,"Times New Roman",Times,serif; line-height:1.7;}
+a{color:var(--link); text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ===== Nav ===== */
+.nav{position:fixed; top:18px; right:36px; z-index:10; font-size:18px; letter-spacing:.3px}
+.nav a{margin-left:26px}
+@media (max-width:640px){
+  .nav{right:18px; font-size:16px}
+  .nav a{margin-left:18px}
+}
+
+/* ===== Layout ===== */
+.hero{min-height:100svh; display:grid; place-items: center; padding:64px 16px 120px}
+.inner{max-width:860px; width:100%}
+.center{display:grid; place-items:center; text-align:center}
+.wrap{max-width:1100px; margin:0 auto; padding:110px 24px 48px}
+
+/* ===== Typography ===== */
+h1{font-size:42px; font-weight:700; margin:0 0 22px}
+.title{font-size:44px; font-weight:700; margin:0 0 16px; text-shadow:0 2px 0 rgba(255,255,255,.06)}
+.motto{color:var(--muted); font-size:18px; margin-top:8px; font-style:italic; letter-spacing:.2px}
+.desc{color:var(--muted); margin-top:6px; font-size:16px; letter-spacing:.2px}
+.greet{margin:0 0 18px; color:var(--muted); font-style:italic}
+@media (max-width:640px){
+  h1{font-size:34px}
+  .title{font-size:36px}
+  .motto{font-size:16px}
+}
+
+/* ===== About (two-column) ===== */
+.about{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:36px;
+  align-items:start;
+}
+.photo img{
+  display:block; width:100%; height:auto; object-fit:cover; border-radius:12px;
+}
+@media (min-width:901px){
+  .photo{margin-top:60px}
+}
+.content p{margin:0 0 16px; color:#e7e7e7}
+@media (max-width:900px){
+  .about{grid-template-columns:1fr}
+}
+
+/* ===== Cards (Coursework & Contact) ===== */
+.list{display:grid; gap:18px; margin-top:28px}
+.card{
+  background:var(--card);
+  border-radius:14px;
+  padding:20px 22px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+.card h3{margin:0 0 6px; font-size:22px}
+.card .time{font-size:14px; color:var(--muted); margin-bottom:10px}
+.card p{margin:0 0 10px; line-height:1.55}
+.read{font-weight:600}
+.pad{height:36px}
+
+/* ===== Contact icons & kaomoji ===== */
+.kao-row{display:flex; align-items:center; gap:10px; margin:4px 0 18px; user-select:none}
+.kao{font-size:28px; display:inline-block; letter-spacing:1px}
+.eye{display:inline-block; width:1ch; text-align:center}
+.links{display:flex; gap:12px; flex-wrap:wrap}
+.icon-btn{
+  width:48px; height:48px; border-radius:12px; background:#191919;
+  border:1px solid #272727; display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none; box-shadow:0 8px 18px rgba(0,0,0,.35);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+  color:var(--text);
+}
+.icon-btn:hover{
+  transform:translateY(-2px);
+  border-color:#323232;
+  background:#1d1d1d;
+  box-shadow:0 10px 22px rgba(0,0,0,.40);
+}
+.icon-btn:active{ transform: translateY(0) }
+.icon-btn svg{width:22px; height:22px}
+
+/* ===== Accessibility helper ===== */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
