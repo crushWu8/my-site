@@ -34,7 +34,10 @@ a:hover{text-decoration:underline}
 /* ===== Visitors ===== */
 .visitors{position:relative; z-index:1; text-align:center; padding:40px 24px 60px}
 .visitors h2{font-size:32px; margin:0 0 24px}
-.map-wrap{display:block; width:100%; max-width:800px; margin:0 auto; border-radius:12px; filter:grayscale(1) invert(1) brightness(.7) contrast(1.2)}
+.map-wrap{display:block; width:100%; max-width:800px; margin:0 auto; border-radius:12px; overflow:hidden}
+.map-wrap div{background:#000 !important}
+.map-wrap path{fill:#080808 !important; stroke:rgba(255,255,255,.25) !important; stroke-width:.5 !important}
+.map-wrap circle{fill:#3b82f6 !important}
 
 /* ===== Typography ===== */
 h1{font-size:42px; font-weight:700; margin:0 0 22px}
