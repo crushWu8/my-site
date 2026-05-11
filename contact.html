@@ -57,6 +57,27 @@
     </section>
   </main>
 
+  <script>
+    function darkifyMap() {
+      var wrap = document.querySelector('.map-wrap');
+      if (!wrap) return;
+      wrap.querySelectorAll('div').forEach(function(d) {
+        d.style.setProperty('background', '#000', 'important');
+      });
+      wrap.querySelectorAll('path').forEach(function(p) {
+        p.style.setProperty('fill', '#000', 'important');
+        p.style.setProperty('stroke', 'rgba(255,255,255,0.5)', 'important');
+        p.style.setProperty('stroke-width', '1.2', 'important');
+      });
+      wrap.querySelectorAll('circle').forEach(function(c) {
+        c.style.setProperty('fill', '#3b82f6', 'important');
+      });
+    }
+    setTimeout(darkifyMap, 2000);
+    setTimeout(darkifyMap, 4000);
+    setTimeout(darkifyMap, 6000);
+  </script>
+
   <script type="module">
     import { animate } from "https://cdn.jsdelivr.net/npm/motion@10.16.4/+esm";
 
