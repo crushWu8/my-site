@@ -12,6 +12,28 @@
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;background:var(--bg);color:var(--text);
   font-family: Georgia,"Times New Roman",Times,serif; line-height:1.7;}
+
+/* ===== Aurora gradient background ===== */
+body::before{
+  content:"";
+  position:fixed;
+  inset:-50%;
+  width:200%;
+  height:200%;
+  z-index:-1;
+  background:
+    radial-gradient(ellipse 40% 40% at 30% 50%, rgba(30,80,180,.45) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 35% at 65% 40%, rgba(100,30,160,.4) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 35% at 50% 70%, rgba(15,120,130,.4) 0%, transparent 70%);
+  animation: aurora 15s ease-in-out infinite alternate;
+}
+@keyframes aurora{
+  0%   { transform:translate(0,0)      rotate(0deg);   filter:hue-rotate(0deg) }
+  25%  { transform:translate(5%,-8%)   rotate(3deg);   filter:hue-rotate(20deg) }
+  50%  { transform:translate(-3%,5%)   rotate(-2deg);  filter:hue-rotate(-15deg) }
+  75%  { transform:translate(8%,3%)    rotate(4deg);   filter:hue-rotate(25deg) }
+  100% { transform:translate(-5%,-5%)  rotate(-3deg);  filter:hue-rotate(10deg) }
+}
 a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
 
