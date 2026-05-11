@@ -61,23 +61,13 @@
     function darkifyMap() {
       var wrap = document.querySelector('.map-wrap');
       if (!wrap) return;
-      wrap.querySelectorAll('div').forEach(function(d) {
-        d.style.setProperty('background-color', '#000', 'important');
-      });
-      var svg = wrap.querySelector('svg');
-      if (svg) svg.style.setProperty('background', '#000', 'important');
-      wrap.querySelectorAll('path').forEach(function(p) {
-        p.setAttribute('fill', 'rgba(255,255,255,0.75)');
-        p.setAttribute('stroke', '#111');
-        p.setAttribute('stroke-width', '0.5');
-      });
-      wrap.querySelectorAll('circle').forEach(function(c) {
-        c.setAttribute('fill', '#3b82f6');
+      var paths = wrap.querySelectorAll('path');
+      if (!paths.length) return;
+      paths.forEach(function(p) {
+        p.setAttribute('fill', '#ff0000');
       });
     }
-    setTimeout(darkifyMap, 2000);
-    setTimeout(darkifyMap, 4000);
-    setTimeout(darkifyMap, 6000);
+    setTimeout(darkifyMap, 3000);
   </script>
 
   <script type="module">
