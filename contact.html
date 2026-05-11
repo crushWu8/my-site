@@ -62,15 +62,17 @@
       var wrap = document.querySelector('.map-wrap');
       if (!wrap) return;
       wrap.querySelectorAll('div').forEach(function(d) {
-        d.style.setProperty('background', '#000', 'important');
+        d.style.setProperty('background-color', '#000', 'important');
       });
+      var svg = wrap.querySelector('svg');
+      if (svg) svg.style.setProperty('background', '#000', 'important');
       wrap.querySelectorAll('path').forEach(function(p) {
-        p.style.setProperty('fill', 'rgba(255,255,255,0.75)', 'important');
-        p.style.setProperty('stroke', '#000', 'important');
-        p.style.setProperty('stroke-width', '0.5', 'important');
+        p.setAttribute('fill', 'rgba(255,255,255,0.75)');
+        p.setAttribute('stroke', '#111');
+        p.setAttribute('stroke-width', '0.5');
       });
       wrap.querySelectorAll('circle').forEach(function(c) {
-        c.style.setProperty('fill', '#3b82f6', 'important');
+        c.setAttribute('fill', '#3b82f6');
       });
     }
     setTimeout(darkifyMap, 2000);
