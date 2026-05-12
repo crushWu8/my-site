@@ -57,35 +57,6 @@
     </section>
   </main>
 
-  <script>
-    (function() {
-      var done = false;
-      function styleMap() {
-        var widget = document.getElementById('mapmyvisitors-widget');
-        if (!widget) return;
-        var paths = widget.querySelectorAll('path');
-        if (!paths.length) return;
-        done = true;
-        widget.querySelectorAll('div').forEach(function(d) {
-          d.style.setProperty('background-color', '#000', 'important');
-        });
-        paths.forEach(function(p) {
-          p.style.setProperty('fill', 'rgba(200,200,200,0.8)', 'important');
-          p.style.setProperty('stroke', '#111', 'important');
-          p.style.setProperty('stroke-width', '0.4', 'important');
-        });
-        widget.querySelectorAll('circle').forEach(function(c) {
-          c.style.setProperty('fill', '#3b82f6', 'important');
-        });
-      }
-      var obs = new MutationObserver(function() {
-        if (!done) styleMap();
-      });
-      obs.observe(document.body, { childList: true, subtree: true });
-      setInterval(function() { if (!done) styleMap(); }, 500);
-    })();
-  </script>
-
   <script type="module">
     import { animate } from "https://cdn.jsdelivr.net/npm/motion@10.16.4/+esm";
 
