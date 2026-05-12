@@ -57,6 +57,14 @@
     </section>
   </main>
 
+  <script>
+    setInterval(function(){
+      document.querySelectorAll('[class*="zoom"]').forEach(function(el){
+        el.style.display='none';
+      });
+    }, 1000);
+  </script>
+
   <script type="module">
     import { animate } from "https://cdn.jsdelivr.net/npm/motion@10.16.4/+esm";
 
