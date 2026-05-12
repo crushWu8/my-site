@@ -58,24 +58,32 @@
   </main>
 
   <script>
-    function debugMap() {
-      var info = [];
-      info.push('All paths: ' + document.querySelectorAll('path').length);
-      info.push('All SVGs: ' + document.querySelectorAll('svg').length);
-      info.push('All iframes: ' + document.querySelectorAll('iframe').length);
-      info.push('All canvas: ' + document.querySelectorAll('canvas').length);
-      var wrap = document.querySelector('.map-wrap');
-      if (wrap) {
-        info.push('wrap children: ' + wrap.innerHTML.substring(0, 300));
+    (function() {
+      var done = false;
+      function styleMap() {
+        var widget = document.getElementById('mapmyvisitors-widget');
+        if (!widget) return;
+        var paths = widget.querySelectorAll('path');
+        if (!paths.length) return;
+        done = true;
+        widget.querySelectorAll('div').forEach(function(d) {
+          d.style.setProperty('background-color', '#000', 'important');
+        });
+        paths.forEach(function(p) {
+          p.style.setProperty('fill', 'rgba(200,200,200,0.8)', 'important');
+          p.style.setProperty('stroke', '#111', 'important');
+          p.style.setProperty('stroke-width', '0.4', 'important');
+        });
+        widget.querySelectorAll('circle').forEach(function(c) {
+          c.style.setProperty('fill', '#3b82f6', 'important');
+        });
       }
-      var el = document.getElementById('mapmyvisitors-widget');
-      if (el) info.push('widget found, parent: ' + el.parentElement.className);
-      var d = document.createElement('pre');
-      d.style.cssText = 'color:#0f0;background:#000;padding:12px;font-size:13px;position:relative;z-index:99;white-space:pre-wrap;word-break:break-all';
-      d.textContent = info.join('\n');
-      document.querySelector('.visitors').appendChild(d);
-    }
-    setTimeout(debugMap, 4000);
+      var obs = new MutationObserver(function() {
+        if (!done) styleMap();
+      });
+      obs.observe(document.body, { childList: true, subtree: true });
+      setInterval(function() { if (!done) styleMap(); }, 500);
+    })();
   </script>
 
   <script type="module">
