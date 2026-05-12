@@ -34,7 +34,7 @@ a:hover{text-decoration:underline}
 /* ===== Visitors ===== */
 .visitors{position:relative; z-index:1; text-align:center; padding:40px 24px 60px}
 .visitors h2{font-size:32px; margin:0 0 24px}
-.map-wrap{display:block; width:100%; max-width:800px; margin:0 auto; border-radius:12px; overflow:hidden; filter:saturate(0) contrast(5) brightness(0.55)}
+.map-wrap{display:block; width:100%; max-width:800px; margin:0 auto; border-radius:12px; overflow:hidden; filter:saturate(0) contrast(12) brightness(0.75)}
 
 /* ===== Typography ===== */
 h1{font-size:42px; font-weight:700; margin:0 0 22px}
