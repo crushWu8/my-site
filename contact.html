@@ -89,10 +89,12 @@
       const draw = () => {
         const w = wrap.clientWidth;
         chart.draw(table, {
+          displayMode: 'markers',
           backgroundColor: { fill: 'transparent' },
           datalessRegionColor: '#3a4458',
           defaultColor: '#3a4458',
           colorAxis: { colors: ['#64a0ff', '#c4dfff'] },
+          sizeAxis: { minValue: 1, minSize: 6, maxSize: 16 },
           legend: 'none',
           width: w,
           height: w * 397 / 800,
@@ -102,13 +104,15 @@
       try {
         const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
         const data = await res.json();
-        const entries = Object.entries(data.countries || {});
-        const n = entries.length;
+        const cities = data.cities || [];
+        const n = cities.length;
         countEl.textContent =
-          `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'country' : 'countries'}`;
+          `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
-        const rows = n > 0 ? entries : [['US', 0]];
-        table = google.visualization.arrayToDataTable([['Country', 'Visits'], ...rows]);
+        const rows = n > 0
+          ? cities.map(c => [`${c.city}, ${c.country}`, c.count])
+          : [['New York, US', 0]];
+        table = google.visualization.arrayToDataTable([['City', 'Visits'], ...rows]);
         chart = new google.visualization.GeoChart(wrap);
         draw();
 
