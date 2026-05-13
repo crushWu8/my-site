@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Get in touch with Shanghao Wu — GitHub, email, and LinkedIn.">
   <title>Contact | Shanghao Wu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -56,22 +57,6 @@
       </div>
     </section>
   </main>
-
-  <style>
-    .map-wrap div[style*="cursor"][style*="absolute"]{display:none !important}
-  </style>
-  <script>
-    setInterval(function(){
-      var wrap = document.querySelector('.map-wrap');
-      if(!wrap) return;
-      wrap.querySelectorAll('div').forEach(function(el){
-        var s = el.style;
-        if(s.position === 'absolute' && s.cursor === 'pointer' && el.offsetWidth < 40){
-          el.style.display = 'none';
-        }
-      });
-    }, 1500);
-  </script>
 
   <script type="module">
     import { animate } from "https://cdn.jsdelivr.net/npm/motion@10.16.4/+esm";

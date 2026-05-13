@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.">
   <title>Shanghao Wu</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <canvas id="particle-canvas"></canvas>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
 
   <nav class="nav">
     <a href="index.html" aria-current="page">Home</a>
@@ -61,6 +62,7 @@
     }
 
     function loop(){
+      if(document.hidden){ requestAnimationFrame(loop); return; }
       ctx.clearRect(0,0,w,h);
 
       for(var i=0;i<N;i++){
