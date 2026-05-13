@@ -30,7 +30,7 @@ a:hover{text-decoration:underline}
 .hero{min-height:100svh; display:grid; place-items: center; padding:64px 16px 120px}
 .inner{max-width:860px; width:100%}
 .center{display:grid; place-items:center; text-align:center}
-.wrap{position:relative; z-index:1; max-width:1100px; margin:0 auto; padding:110px 24px 48px}
+.wrap{max-width:1100px; margin:0 auto; padding:110px 24px 48px}
 
 /* ===== Visitors ===== */
 .visitors{position:relative; z-index:1; text-align:center; padding:40px 24px 60px}
