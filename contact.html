@@ -57,17 +57,20 @@
     </section>
   </main>
 
+  <style>
+    .map-wrap div[style*="cursor"][style*="absolute"]{display:none !important}
+  </style>
   <script>
     setInterval(function(){
       var wrap = document.querySelector('.map-wrap');
       if(!wrap) return;
-      wrap.querySelectorAll('*').forEach(function(el){
-        var t = el.textContent.trim();
-        if(t === '+' || t === '-' || t === '−'){
+      wrap.querySelectorAll('div').forEach(function(el){
+        var s = el.style;
+        if(s.position === 'absolute' && s.cursor === 'pointer' && el.offsetWidth < 40){
           el.style.display = 'none';
         }
       });
-    }, 1000);
+    }, 1500);
   </script>
 
   <script type="module">
