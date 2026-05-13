@@ -83,6 +83,22 @@
     google.charts.load('current', { packages: ['geochart'] });
     google.charts.setOnLoadCallback(async () => {
       const countEl = document.querySelector('.visitors-count');
+      const wrap = document.getElementById('geochart');
+      let chart, table;
+
+      const draw = () => {
+        const w = wrap.clientWidth;
+        chart.draw(table, {
+          backgroundColor: { fill: 'transparent' },
+          datalessRegionColor: '#3a4458',
+          defaultColor: '#3a4458',
+          colorAxis: { colors: ['#64a0ff', '#c4dfff'] },
+          legend: 'none',
+          width: w,
+          height: w / 2,
+        });
+      };
+
       try {
         const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
         const data = await res.json();
@@ -92,14 +108,14 @@
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'country' : 'countries'}`;
 
         const rows = n > 0 ? entries : [['US', 0]];
-        const table = google.visualization.arrayToDataTable([['Country', 'Visits'], ...rows]);
-        const chart = new google.visualization.GeoChart(document.getElementById('geochart'));
-        chart.draw(table, {
-          backgroundColor: { fill: 'transparent' },
-          datalessRegionColor: '#1d1d1d',
-          defaultColor: '#1d1d1d',
-          colorAxis: { colors: ['#3a5a8a', '#64a0ff'] },
-          legend: 'none',
+        table = google.visualization.arrayToDataTable([['Country', 'Visits'], ...rows]);
+        chart = new google.visualization.GeoChart(wrap);
+        draw();
+
+        let raf;
+        window.addEventListener('resize', () => {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(draw);
         });
       } catch (e) {
         countEl.textContent = 'Visitor stats unavailable';
