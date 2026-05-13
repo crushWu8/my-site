@@ -51,9 +51,8 @@
 
       <div class="visitors">
         <h2>Visitors</h2>
-        <div class="map-wrap">
-          <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=e5e5e5&w=800&t=tt&d=9FtIYWRGj77sGgffK5uDET_Bo5gQe0uR_z2QUJ5uUys&co=000000&ct=ffffff&cmo=64a0ff&cmn=197fa8'></script>
-        </div>
+        <p class="visitors-count">Loading…</p>
+        <div id="geochart" class="map-wrap"></div>
       </div>
     </section>
   </main>
@@ -75,6 +74,37 @@
     };
     const cycle = () => { blink(); setTimeout(lookAround, 2000); };
     cycle(); setInterval(cycle, 8000);
+  </script>
+
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});
+
+    google.charts.load('current', { packages: ['geochart'] });
+    google.charts.setOnLoadCallback(async () => {
+      const countEl = document.querySelector('.visitors-count');
+      try {
+        const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
+        const data = await res.json();
+        const entries = Object.entries(data.countries || {});
+        const n = entries.length;
+        countEl.textContent =
+          `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'country' : 'countries'}`;
+
+        const rows = n > 0 ? entries : [['US', 0]];
+        const table = google.visualization.arrayToDataTable([['Country', 'Visits'], ...rows]);
+        const chart = new google.visualization.GeoChart(document.getElementById('geochart'));
+        chart.draw(table, {
+          backgroundColor: { fill: 'transparent' },
+          datalessRegionColor: '#1d1d1d',
+          defaultColor: '#1d1d1d',
+          colorAxis: { colors: ['#3a5a8a', '#64a0ff'] },
+          legend: 'none',
+        });
+      } catch (e) {
+        countEl.textContent = 'Visitor stats unavailable';
+      }
+    });
   </script>
 </body>
 </html>
