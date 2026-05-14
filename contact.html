@@ -98,11 +98,24 @@
           sizeAxis: { minValue: 1, minSize: 8, maxSize: 18 },
           legend: 'none',
           magnifyingGlass: { enable: false },
-          tooltip: { isHtml: true },
           width: w,
           height: w * 397 / 800,
         });
       };
+
+      const tip = document.createElement('div');
+      tip.className = 'visitor-tip';
+      document.body.appendChild(tip);
+      let mouseX = 0, mouseY = 0;
+      const positionTip = () => {
+        tip.style.left = (mouseX + 14) + 'px';
+        tip.style.top = (mouseY - 36) + 'px';
+      };
+      document.addEventListener('mousemove', e => {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        if (tip.style.display === 'block') positionTip();
+      });
 
       try {
         const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
@@ -112,20 +125,23 @@
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
-        table = new google.visualization.DataTable();
-        table.addColumn('number', 'Lat');
-        table.addColumn('number', 'Long');
-        table.addColumn('number', 'Visits');
-        table.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
-        const tip = c =>
-          `<div class="visitor-tip">${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}</div>`;
-        if (n > 0) {
-          cities.forEach(c => table.addRow([c.lat, c.lon, c.count, tip(c)]));
-        } else {
-          table.addRow([0, 0, 0, '<div class="visitor-tip">No visits yet</div>']);
-        }
+        const rows = n > 0
+          ? cities.map(c => [c.lat, c.lon, c.count])
+          : [[0, 0, 0]];
+        table = google.visualization.arrayToDataTable([['Lat', 'Long', 'Visits'], ...rows]);
         chart = new google.visualization.GeoChart(wrap);
         draw();
+
+        google.visualization.events.addListener(chart, 'onmouseover', e => {
+          if (e.row == null || n === 0) return;
+          const c = cities[e.row];
+          tip.textContent = `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`;
+          positionTip();
+          tip.style.display = 'block';
+        });
+        google.visualization.events.addListener(chart, 'onmouseout', () => {
+          tip.style.display = 'none';
+        });
 
         let raf;
         window.addEventListener('resize', () => {
