@@ -148,7 +148,7 @@
 
           const projection = d3.geoEquirectangular();
           const path = d3.geoPath(projection);
-          projection.fitExtent([[8, 8], [W - 8, H - 8]], land);
+          projection.fitExtent([[-W * 0.03, 8], [W - 8, H - 8]], land);
 
           svg.append('g').selectAll('path')
             .data(land.features).enter().append('path')
