@@ -136,22 +136,6 @@
           type: 'FeatureCollection',
           features: all.features.filter(f => f.properties.name !== 'Antarctica'),
         };
-        const shift = c => typeof c[0] === 'number'
-          ? (c[0] < -150 ? [c[0] + 360, c[1]] : c)
-          : c.map(shift);
-        land.features.forEach(f => {
-          let sumLon = 0, count = 0, hasFarWest = false;
-          const visit = c => {
-            if (typeof c[0] === 'number') {
-              sumLon += c[0]; count++;
-              if (c[0] < -150) hasFarWest = true;
-            } else c.forEach(visit);
-          };
-          visit(f.geometry.coordinates);
-          if (count > 0 && sumLon / count > 0 && hasFarWest) {
-            f.geometry.coordinates = shift(f.geometry.coordinates);
-          }
-        });
         const maxCount = Math.max(1, ...cities.map(c => c.count));
 
         const draw = () => {
@@ -164,7 +148,7 @@
 
           const projection = d3.geoEquirectangular();
           const path = d3.geoPath(projection);
-          projection.fitExtent([[8, 8], [W - 8, H - 8]], land);
+          projection.fitExtent([[-W * 0.03, 8], [W - 8, H - 8]], land);
 
           svg.append('g').selectAll('path')
             .data(land.features).enter().append('path')
