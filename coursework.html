@@ -1,92 +1,77 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Selected data projects by Shanghao Wu — modeling, analytics, and dashboards across healthcare, transit, sports, and crime data.">
-  <title>Coursework | Shanghao Wu</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="coursework.html" aria-current="page">Coursework</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+---
+layout: default
+title: Coursework
+nav: coursework
+description: Selected data projects by Shanghao Wu — modeling, analytics, and dashboards across healthcare, transit, sports, and crime data.
+---
+<main class="hero">
+  <section class="inner">
+    <h1>Coursework</h1>
+    <p class="desc">Selected data projects with concise write-ups and links to full repositories.</p>
 
-  <main class="hero">
-    <section class="inner">
-      <h1>Coursework</h1>
-      <p class="desc">Selected data projects with concise write-ups and links to full repositories.</p>
+    <div class="list">
+      <article class="card">
+        <h3>Diabetic Readmission Prediction</h3>
+        <div class="time">Duration: Mid Mar 2025 – Apr 2025</div>
+        <p>
+          Designed a pipeline that cleans hospital records, tests hypotheses, engineers risk features,
+          and trains ensemble models to flag patients likely to be readmitted within 30 days.
+          The analysis highlights prior inpatient visits and overall utilization as the strongest signals
+          and discusses fairness trade-offs and threshold choices for clinical use.
+        </p>
+        <a class="read" href="https://github.com/crushWu8/diabetic-readmission-prediction" target="_blank" rel="noopener">Read more →</a>
+      </article>
 
-      <div class="list">
-        <article class="card">
-          <h3>Diabetic Readmission Prediction</h3>
-          <div class="time">Duration: Mid Mar 2025 – Apr 2025</div>
-          <p>
-            Designed a pipeline that cleans hospital records, tests hypotheses, engineers risk features,
-            and trains ensemble models to flag patients likely to be readmitted within 30 days.
-            The analysis highlights prior inpatient visits and overall utilization as the strongest signals
-            and discusses fairness trade-offs and threshold choices for clinical use.
-          </p>
-          <a class="read" href="https://github.com/crushWu8/diabetic-readmission-prediction" target="_blank" rel="noopener">Read more →</a>
-        </article>
+      <article class="card">
+        <h3>Wildlife Strike Analytics</h3>
+        <div class="time">Duration: Mid Mar 2025 – Apr 2025</div>
+        <p>
+          Built an analysis pipeline that cleans FAA wildlife-strike records, visualizes trends, and tests
+          hypotheses to identify where and when risk concentrates. The study shows highest risk near large
+          coastal airports and migration corridors—especially during approach/landing at ~140–160&nbsp;kt—
+          and uses a simple trend model (AWP region, 1990–2015) to forecast 2016–2020 while noting limits
+          of linear extrapolation. Findings inform airport-adjacent mitigation and season-aware planning.
+        </p>
+        <a class="read" href="https://github.com/crushWu8/Bird-Strike-Analytics" target="_blank" rel="noopener">Read more →</a>
+      </article>
 
-        <article class="card">
-          <h3>Wildlife Strike Analytics</h3>
-          <div class="time">Duration: Mid Mar 2025 – Apr 2025</div>
-          <p>
-            Built an analysis pipeline that cleans FAA wildlife-strike records, visualizes trends, and tests
-            hypotheses to identify where and when risk concentrates. The study shows highest risk near large
-            coastal airports and migration corridors—especially during approach/landing at ~140–160&nbsp;kt—
-            and uses a simple trend model (AWP region, 1990–2015) to forecast 2016–2020 while noting limits
-            of linear extrapolation. Findings inform airport-adjacent mitigation and season-aware planning.
-          </p>
-          <a class="read" href="https://github.com/crushWu8/Bird-Strike-Analytics" target="_blank" rel="noopener">Read more →</a>
-        </article>
+      <article class="card">
+        <h3>MBTA Bus Reliability Dashboard</h3>
+        <div class="time">Duration: Nov 2025 – Dec 2025</div>
+        <p>
+          Cleaned and aggregated historical MBTA bus performance data, joining it with daily weather
+          records to analyze on-time reliability across key routes. Built and deployed an interactive
+          dashboard on GitHub Pages visualizing reliability trends, precipitation impact, and
+          route-level ridership shifts under varying weather conditions.
+        </p>
+        <a class="read" href="https://github.com/crushWu8/mbta-bus-reliability" target="_blank" rel="noopener">Read more →</a>
+      </article>
 
-        <article class="card">
-          <h3>MBTA Bus Reliability Dashboard</h3>
-          <div class="time">Duration: Nov 2025 – Dec 2025</div>
-          <p>
-            Cleaned and aggregated historical MBTA bus performance data, joining it with daily weather
-            records to analyze on-time reliability across key routes. Built and deployed an interactive
-            dashboard on GitHub Pages visualizing reliability trends, precipitation impact, and
-            route-level ridership shifts under varying weather conditions.
-          </p>
-          <a class="read" href="https://github.com/crushWu8/mbta-bus-reliability" target="_blank" rel="noopener">Read more →</a>
-        </article>
+      <article class="card">
+        <h3>FIFA Ticket Market Price Competition</h3>
+        <div class="time">Duration: Nov 2025 – Dec 2025</div>
+        <p>
+          Modeled price competition between FIFA's official resale platform and the unofficial
+          secondary market using a static Bertrand duopoly framework with a deviation parameter.
+          Estimated a linear demand system from real transaction data, evaluated revenues under
+          four pricing regimes, and visualized comparative statics of equilibrium deviations.
+        </p>
+        <a class="read" href="https://github.com/crushWu8/fifa-ticket-bertrand-duopoly" target="_blank" rel="noopener">Read more →</a>
+      </article>
 
-        <article class="card">
-          <h3>FIFA Ticket Market Price Competition</h3>
-          <div class="time">Duration: Nov 2025 – Dec 2025</div>
-          <p>
-            Modeled price competition between FIFA's official resale platform and the unofficial
-            secondary market using a static Bertrand duopoly framework with a deviation parameter.
-            Estimated a linear demand system from real transaction data, evaluated revenues under
-            four pricing regimes, and visualized comparative statics of equilibrium deviations.
-          </p>
-          <a class="read" href="https://github.com/crushWu8/fifa-ticket-bertrand-duopoly" target="_blank" rel="noopener">Read more →</a>
-        </article>
+      <article class="card">
+        <h3>Crime Analysis: Boston &amp; Los Angeles</h3>
+        <div class="time">Duration: Jul 2024 – Sep 2024</div>
+        <p>
+          Analyzed crime trends in Boston and Los Angeles from 2020 to 2024, focusing on fluctuations
+          during major events such as economic recessions and public health crises. Studied the correlation
+          between socioeconomic factors like unemployment and crime rates to provide data support for
+          public safety strategies and policy recommendations.
+        </p>
+        <a class="read" href="https://github.com/crushWu8/Crime_Analysis" target="_blank" rel="noopener">Read more →</a>
+      </article>
+    </div>
 
-        <article class="card">
-          <h3>Crime Analysis: Boston &amp; Los Angeles</h3>
-          <div class="time">Duration: Jul 2024 – Sep 2024</div>
-          <p>
-            Analyzed crime trends in Boston and Los Angeles from 2020 to 2024, focusing on fluctuations
-            during major events such as economic recessions and public health crises. Studied the correlation
-            between socioeconomic factors like unemployment and crime rates to provide data support for
-            public safety strategies and policy recommendations.
-          </p>
-          <a class="read" href="https://github.com/crushWu8/Crime_Analysis" target="_blank" rel="noopener">Read more →</a>
-        </article>
-      </div>
-
-      <div class="pad"></div>
-    </section>
-  </main>
-
-  <script>fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});</script>
-</body>
-</html>
+    <div class="pad"></div>
+  </section>
+</main>

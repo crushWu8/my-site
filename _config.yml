@@ -1,0 +1,18 @@
+title: Shanghao Wu
+description: Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.
+author: Shanghao Wu
+url: "https://crushwu8.github.io"
+baseurl: "/my-site"
+
+markdown: kramdown
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-feed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

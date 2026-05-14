@@ -105,6 +105,32 @@ h1{font-size:42px; font-weight:700; margin:0 0 22px}
 .icon-btn:active{ transform: translateY(0) }
 .icon-btn svg{width:22px; height:22px}
 
+/* ===== Blog ===== */
+.blog-list, .post{position:relative; z-index:1}
+.post-list{list-style:none; padding:0; margin:28px 0 0}
+.post-list li{padding:18px 0; border-bottom:1px solid var(--border)}
+.post-list li:last-child{border-bottom:none}
+.post-list time{display:block; color:var(--muted); font-size:14px; margin-bottom:6px}
+.post-list .post-link{font-size:22px; font-weight:600}
+.post-list .excerpt{color:#e7e7e7; margin:8px 0 0; font-size:15px; line-height:1.55}
+.post-list .empty{color:var(--muted); margin-top:24px}
+.post-header{margin-bottom:28px}
+.post-header h1{margin:0 0 8px}
+.post-header time{display:block; color:var(--muted); font-size:14px}
+.post-content p{margin:0 0 16px; color:#e7e7e7}
+.post-content h2{font-size:28px; margin:32px 0 12px}
+.post-content h3{font-size:22px; margin:24px 0 8px}
+.post-content ul, .post-content ol{padding-left:24px; color:#e7e7e7; margin:0 0 16px}
+.post-content li{margin-bottom:6px}
+.post-content code{background:#1d1d1d; padding:2px 6px; border-radius:4px; font-size:90%; font-family:"SF Mono", Menlo, Consolas, monospace}
+.post-content pre{background:#1d1d1d; padding:16px; border-radius:8px; overflow-x:auto; margin:0 0 16px}
+.post-content pre code{background:transparent; padding:0}
+.post-content blockquote{border-left:3px solid var(--border); margin:16px 0; padding-left:16px; color:var(--muted); font-style:italic}
+.post-content a{text-decoration:underline; text-underline-offset:3px}
+.post-content img{max-width:100%; height:auto; border-radius:8px}
+.post-back{margin-top:48px; font-size:14px}
+.post-back a{color:var(--muted)}
+
 /* ===== Accessibility helper ===== */
 .sr-only{
   position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
