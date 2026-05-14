@@ -36,7 +36,7 @@ a:hover{text-decoration:underline}
 .visitors{position:relative; z-index:1; text-align:center; padding:40px 24px 60px}
 .visitors h2{font-size:32px; margin:0 0 12px}
 .visitors-count{color:var(--muted); margin:0 0 20px; font-size:15px; letter-spacing:.2px}
-.map-wrap{position:relative; display:block; width:100%; max-width:800px; aspect-ratio:800/440; margin:0 auto; border-radius:12px; overflow:hidden}
+.map-wrap{position:relative; display:block; width:100%; max-width:800px; aspect-ratio:800/360; margin:0 auto; border-radius:12px; overflow:hidden}
 .visitor-tip{position:absolute; display:none; padding:8px 12px; background:#fff; color:#111; font-family:Georgia,"Times New Roman",Times,serif; font-size:14px; border-radius:6px; box-shadow:0 4px 14px rgba(0,0,0,.35); pointer-events:none; z-index:100; white-space:nowrap}
 
 /* ===== Typography ===== */
