@@ -98,6 +98,7 @@
           sizeAxis: { minValue: 1, minSize: 8, maxSize: 18 },
           legend: 'none',
           magnifyingGlass: { enable: false },
+          tooltip: { isHtml: true },
           width: w,
           height: w * 397 / 800,
         });
@@ -111,10 +112,18 @@
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
-        const rows = n > 0
-          ? cities.map(c => [`${c.city}, ${c.country}`, c.count])
-          : [['New York, US', 0]];
-        table = google.visualization.arrayToDataTable([['City', 'Visits'], ...rows]);
+        table = new google.visualization.DataTable();
+        table.addColumn('number', 'Lat');
+        table.addColumn('number', 'Long');
+        table.addColumn('number', 'Visits');
+        table.addColumn({ type: 'string', role: 'tooltip', p: { html: true } });
+        const tip = c =>
+          `<div style="padding:8px 12px;font-family:Georgia,serif;font-size:14px;">${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}</div>`;
+        if (n > 0) {
+          cities.forEach(c => table.addRow([c.lat, c.lon, c.count, tip(c)]));
+        } else {
+          table.addRow([0, 0, 0, '<div style="padding:8px 12px;">No visits yet</div>']);
+        }
         chart = new google.visualization.GeoChart(wrap);
         draw();
 
