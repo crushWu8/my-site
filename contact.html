@@ -95,7 +95,7 @@
           datalessRegionColor: '#3a4458',
           defaultColor: '#3a4458',
           colorAxis: { colors: ['#3b82f6', '#3b82f6'] },
-          sizeAxis: { minValue: 1, minSize: 8, maxSize: 18 },
+          sizeAxis: { minValue: 1, minSize: 6, maxSize: 14 },
           legend: 'none',
           magnifyingGlass: { enable: false },
           width: w,
@@ -117,10 +117,27 @@
         if (tip.style.display === 'block') positionTip();
       });
 
+      const haversine = (a, b) => {
+        const R = 6371;
+        const r = d => d * Math.PI / 180;
+        const dLat = r(b.lat - a.lat), dLon = r(b.lon - a.lon);
+        const x = Math.sin(dLat / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dLon / 2) ** 2;
+        return 2 * R * Math.asin(Math.sqrt(x));
+      };
+      const cluster = (list, km) => {
+        const out = [];
+        for (const c of [...list].sort((a, b) => b.count - a.count)) {
+          const hit = out.find(o => haversine(c, o) < km);
+          if (hit) hit.count += c.count;
+          else out.push({ ...c });
+        }
+        return out;
+      };
+
       try {
         const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
         const data = await res.json();
-        const cities = data.cities || [];
+        const cities = cluster(data.cities || [], 50);
         const n = cities.length;
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
