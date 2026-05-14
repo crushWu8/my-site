@@ -28,7 +28,7 @@ a:hover{text-decoration:underline}
 
 /* ===== Layout ===== */
 .hero{min-height:100svh; display:grid; place-items: center; padding:64px 16px 120px}
-.inner{max-width:860px; width:100%}
+.inner{max-width:1100px; width:100%}
 .center{display:grid; place-items:center; text-align:center}
 .wrap{max-width:1100px; margin:0 auto; padding:110px 24px 48px}
 
@@ -36,7 +36,7 @@ a:hover{text-decoration:underline}
 .visitors{position:relative; z-index:1; text-align:center; padding:40px 24px 60px}
 .visitors h2{font-size:32px; margin:0 0 12px}
 .visitors-count{color:var(--muted); margin:0 0 20px; font-size:15px; letter-spacing:.2px}
-.map-wrap{position:relative; display:block; width:100%; max-width:800px; aspect-ratio:800/360; margin:0 auto; border-radius:12px; overflow:hidden}
+.map-wrap{position:relative; display:block; width:100%; max-width:1100px; aspect-ratio:1100/440; margin:0 auto; border-radius:12px; overflow:hidden}
 .visitor-tip{position:absolute; display:none; padding:8px 12px; background:#fff; color:#111; font-family:Georgia,"Times New Roman",Times,serif; font-size:14px; border-radius:6px; box-shadow:0 4px 14px rgba(0,0,0,.35); pointer-events:none; z-index:100; white-space:nowrap}
 
 /* ===== Typography ===== */
