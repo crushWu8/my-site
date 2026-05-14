@@ -130,18 +130,30 @@
           : [[0, 0, 0]];
         table = google.visualization.arrayToDataTable([['Lat', 'Long', 'Visits'], ...rows]);
         chart = new google.visualization.GeoChart(wrap);
-        draw();
 
-        google.visualization.events.addListener(chart, 'onmouseover', e => {
-          if (e.row == null || n === 0) return;
-          const c = cities[e.row];
-          tip.textContent = `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`;
-          positionTip();
-          tip.style.display = 'block';
-        });
-        google.visualization.events.addListener(chart, 'onmouseout', () => {
-          tip.style.display = 'none';
-        });
+        const attachTips = () => {
+          const svg = wrap.querySelector('svg');
+          if (!svg || n === 0) return;
+          const markers = Array.from(svg.querySelectorAll('circle'))
+            .filter(c => parseFloat(c.getAttribute('r')) >= 6)
+            .sort((a, b) => parseFloat(a.getAttribute('cx')) - parseFloat(b.getAttribute('cx')));
+          const sortedCities = [...cities].sort((a, b) => a.lon - b.lon);
+          markers.forEach((m, i) => {
+            const c = sortedCities[i];
+            if (!c) return;
+            m.style.cursor = 'pointer';
+            m.addEventListener('mouseenter', () => {
+              tip.textContent = `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`;
+              positionTip();
+              tip.style.display = 'block';
+            });
+            m.addEventListener('mouseleave', () => {
+              tip.style.display = 'none';
+            });
+          });
+        };
+        google.visualization.events.addListener(chart, 'ready', attachTips);
+        draw();
 
         let raf;
         window.addEventListener('resize', () => {
