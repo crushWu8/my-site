@@ -90,11 +90,11 @@
         const w = wrap.clientWidth;
         chart.draw(table, {
           displayMode: 'markers',
-          projection: 'mercator',
+          projection: 'albers',
           backgroundColor: { fill: 'transparent' },
           datalessRegionColor: '#3a4458',
           defaultColor: '#3a4458',
-          colorAxis: { colors: ['#fbbf24', '#fbbf24'] },
+          colorAxis: { colors: ['#3b82f6', '#3b82f6'] },
           sizeAxis: { minValue: 1, minSize: 8, maxSize: 18 },
           legend: 'none',
           magnifyingGlass: { enable: false },
@@ -111,18 +111,10 @@
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
-        table = new google.visualization.DataTable();
-        table.addColumn('number', 'Lat');
-        table.addColumn('number', 'Long');
-        table.addColumn('number', 'Visits');
-        table.addColumn({ type: 'string', role: 'tooltip' });
-        if (n > 0) {
-          cities.forEach(c => {
-            table.addRow([c.lat, c.lon, c.count, `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`]);
-          });
-        } else {
-          table.addRow([0, 0, 0, 'No visits yet']);
-        }
+        const rows = n > 0
+          ? cities.map(c => [`${c.city}, ${c.country}`, c.count])
+          : [['New York, US', 0]];
+        table = google.visualization.arrayToDataTable([['City', 'Visits'], ...rows]);
         chart = new google.visualization.GeoChart(wrap);
         draw();
 
