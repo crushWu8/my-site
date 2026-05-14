@@ -136,13 +136,22 @@
           type: 'FeatureCollection',
           features: all.features.filter(f => f.properties.name !== 'Antarctica'),
         };
-        const russia = land.features.find(f => f.properties && f.properties.name === 'Russia');
-        if (russia) {
-          const shift = c => typeof c[0] === 'number'
-            ? (c[0] < 0 ? [c[0] + 360, c[1]] : c)
-            : c.map(shift);
-          russia.geometry.coordinates = shift(russia.geometry.coordinates);
-        }
+        const shift = c => typeof c[0] === 'number'
+          ? (c[0] < 0 ? [c[0] + 360, c[1]] : c)
+          : c.map(shift);
+        land.features.forEach(f => {
+          let sumLon = 0, count = 0, hasNeg = false;
+          const visit = c => {
+            if (typeof c[0] === 'number') {
+              sumLon += c[0]; count++;
+              if (c[0] < 0) hasNeg = true;
+            } else c.forEach(visit);
+          };
+          visit(f.geometry.coordinates);
+          if (count > 0 && sumLon / count > 0 && hasNeg) {
+            f.geometry.coordinates = shift(f.geometry.coordinates);
+          }
+        });
         const maxCount = Math.max(1, ...cities.map(c => c.count));
 
         const draw = () => {
