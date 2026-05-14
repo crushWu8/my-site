@@ -76,67 +76,54 @@
     cycle(); setInterval(cycle, 8000);
   </script>
 
-  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
   <script>
     fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});
 
-    google.charts.load('current', { packages: ['geochart'] });
-    google.charts.setOnLoadCallback(async () => {
-      const countEl = document.querySelector('.visitors-count');
-      const wrap = document.getElementById('geochart');
-      let chart, table;
+    const wrap = document.getElementById('geochart');
+    const countEl = document.querySelector('.visitors-count');
 
-      const draw = () => {
-        const w = wrap.clientWidth;
-        chart.draw(table, {
-          displayMode: 'markers',
-          projection: 'mercator',
-          backgroundColor: { fill: 'transparent' },
-          datalessRegionColor: '#3a4458',
-          defaultColor: '#3a4458',
-          colorAxis: { colors: ['#3b82f6', '#3b82f6'] },
-          sizeAxis: { minValue: 1, minSize: 4, maxSize: 10 },
-          legend: 'none',
-          magnifyingGlass: { enable: false },
-          width: w,
-          height: w * 397 / 800,
-        });
-      };
+    const tip = document.createElement('div');
+    tip.className = 'visitor-tip';
+    document.body.appendChild(tip);
+    let mouseX = 0, mouseY = 0;
+    const positionTip = () => {
+      tip.style.left = (mouseX + 14) + 'px';
+      tip.style.top = (mouseY - 36) + 'px';
+    };
+    document.addEventListener('mousemove', e => {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+      if (tip.style.display === 'block') positionTip();
+    });
 
-      const tip = document.createElement('div');
-      tip.className = 'visitor-tip';
-      document.body.appendChild(tip);
-      let mouseX = 0, mouseY = 0;
-      const positionTip = () => {
-        tip.style.left = (mouseX + 14) + 'px';
-        tip.style.top = (mouseY - 36) + 'px';
-      };
-      document.addEventListener('mousemove', e => {
-        mouseX = e.pageX;
-        mouseY = e.pageY;
-        if (tip.style.display === 'block') positionTip();
-      });
+    const haversine = (a, b) => {
+      const R = 6371;
+      const r = d => d * Math.PI / 180;
+      const dLat = r(b.lat - a.lat), dLon = r(b.lon - a.lon);
+      const x = Math.sin(dLat / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dLon / 2) ** 2;
+      return 2 * R * Math.asin(Math.sqrt(x));
+    };
+    const cluster = (list, km) => {
+      const out = [];
+      for (const c of [...list].sort((a, b) => b.count - a.count)) {
+        const hit = out.find(o => haversine(c, o) < km);
+        if (hit) hit.count += c.count;
+        else out.push({ ...c });
+      }
+      return out;
+    };
 
-      const haversine = (a, b) => {
-        const R = 6371;
-        const r = d => d * Math.PI / 180;
-        const dLat = r(b.lat - a.lat), dLon = r(b.lon - a.lon);
-        const x = Math.sin(dLat / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(dLon / 2) ** 2;
-        return 2 * R * Math.asin(Math.sqrt(x));
-      };
-      const cluster = (list, km) => {
-        const out = [];
-        for (const c of [...list].sort((a, b) => b.count - a.count)) {
-          const hit = out.find(o => haversine(c, o) < km);
-          if (hit) hit.count += c.count;
-          else out.push({ ...c });
-        }
-        return out;
-      };
-
+    (async () => {
       try {
-        const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
-        const data = await res.json();
+        const [statsRes, worldRes] = await Promise.all([
+          fetch('https://site-stats.crushwu8.workers.dev/api/stats'),
+          fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'),
+        ]);
+        const data = await statsRes.json();
+        const world = await worldRes.json();
+
         const CN_TERRITORIES = new Set(['HK', 'MO', 'TW']);
         const raw = (data.cities || []).map(c => CN_TERRITORIES.has(c.country) ? { ...c, country: 'CN' } : c);
         const cities = cluster(raw, 50);
@@ -144,36 +131,56 @@
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
-        const rows = n > 0
-          ? cities.map(c => [c.lat, c.lon, c.count])
-          : [[0, 0, 0]];
-        table = google.visualization.arrayToDataTable([['Lat', 'Long', 'Visits'], ...rows]);
-        chart = new google.visualization.GeoChart(wrap);
+        const all = topojson.feature(world, world.objects.countries);
+        const land = {
+          type: 'FeatureCollection',
+          features: all.features.filter(f => f.properties.name !== 'Antarctica'),
+        };
+        const maxCount = Math.max(1, ...cities.map(c => c.count));
 
-        const attachTips = () => {
-          const svg = wrap.querySelector('svg');
-          if (!svg || n === 0) return;
-          const markers = Array.from(svg.querySelectorAll('circle'))
-            .filter(c => parseFloat(c.getAttribute('r')) >= 3)
-            .sort((a, b) => parseFloat(a.getAttribute('cx')) - parseFloat(b.getAttribute('cx')));
-          const sortedCities = [...cities].sort((a, b) => a.lon - b.lon);
-          markers.forEach((m, i) => {
-            const c = sortedCities[i];
-            if (!c) return;
-            m.style.cursor = 'pointer';
-            m.addEventListener('mouseenter', () => {
+        const draw = () => {
+          const W = wrap.clientWidth;
+          const H = W * 397 / 800;
+          wrap.innerHTML = '';
+
+          const svg = d3.select(wrap).append('svg')
+            .attr('width', W).attr('height', H);
+
+          const projection = d3.geoMercator().rotate([-15, 0]);
+          const path = d3.geoPath(projection);
+          projection.fitExtent([[8, 8], [W - 8, H - 8]], land);
+
+          svg.append('g').selectAll('path')
+            .data(land.features).enter().append('path')
+            .attr('d', path)
+            .attr('fill', '#3a4458')
+            .attr('stroke', '#000')
+            .attr('stroke-width', 0.3);
+
+          const markers = svg.append('g');
+          cities.forEach(c => {
+            const proj = projection([c.lon, c.lat]);
+            if (!proj) return;
+            const radius = 4 + (c.count / maxCount) * 6;
+            const circle = markers.append('circle')
+              .attr('cx', proj[0])
+              .attr('cy', proj[1])
+              .attr('r', radius)
+              .attr('fill', '#3b82f6')
+              .style('cursor', 'pointer')
+              .node();
+            circle.addEventListener('mouseenter', () => {
               tip.textContent = `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`;
               positionTip();
               tip.style.display = 'block';
             });
-            m.addEventListener('mouseleave', () => {
+            circle.addEventListener('mouseleave', () => {
               tip.style.display = 'none';
             });
           });
         };
-        google.visualization.events.addListener(chart, 'ready', attachTips);
-        draw();
 
+        draw();
         let raf;
         window.addEventListener('resize', () => {
           cancelAnimationFrame(raf);
@@ -182,7 +189,7 @@
       } catch (e) {
         countEl.textContent = 'Visitor stats unavailable';
       }
-    });
+    })();
   </script>
 </body>
 </html>
