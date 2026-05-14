@@ -137,18 +137,18 @@
           features: all.features.filter(f => f.properties.name !== 'Antarctica'),
         };
         const shift = c => typeof c[0] === 'number'
-          ? (c[0] < 0 ? [c[0] + 360, c[1]] : c)
+          ? (c[0] < -150 ? [c[0] + 360, c[1]] : c)
           : c.map(shift);
         land.features.forEach(f => {
-          let sumLon = 0, count = 0, hasNeg = false;
+          let sumLon = 0, count = 0, hasFarWest = false;
           const visit = c => {
             if (typeof c[0] === 'number') {
               sumLon += c[0]; count++;
-              if (c[0] < 0) hasNeg = true;
+              if (c[0] < -150) hasFarWest = true;
             } else c.forEach(visit);
           };
           visit(f.geometry.coordinates);
-          if (count > 0 && sumLon / count > 0 && hasNeg) {
+          if (count > 0 && sumLon / count > 0 && hasFarWest) {
             f.geometry.coordinates = shift(f.geometry.coordinates);
           }
         });
