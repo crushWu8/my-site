@@ -137,7 +137,9 @@
       try {
         const res = await fetch('https://site-stats.crushwu8.workers.dev/api/stats');
         const data = await res.json();
-        const cities = cluster(data.cities || [], 50);
+        const CN_TERRITORIES = new Set(['HK', 'MO', 'TW']);
+        const raw = (data.cities || []).map(c => CN_TERRITORIES.has(c.country) ? { ...c, country: 'CN' } : c);
+        const cities = cluster(raw, 50);
         const n = cities.length;
         countEl.textContent =
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
