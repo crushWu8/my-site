@@ -206,7 +206,7 @@
           cities.forEach(c => {
             const proj = project(c.lon, c.lat);
             if (!proj) return;
-            const radius = 4 + (c.count / maxCount) * 6;
+            const radius = 4 + Math.sqrt(c.count / maxCount) * 6;
             const circle = markers.append('circle')
               .attr('cx', proj[0])
               .attr('cy', proj[1])
