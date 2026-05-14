@@ -93,9 +93,11 @@
           backgroundColor: { fill: 'transparent' },
           datalessRegionColor: '#3a4458',
           defaultColor: '#3a4458',
-          colorAxis: { colors: ['#fbbf24', '#f472b6'] },
-          sizeAxis: { minValue: 1, minSize: 12, maxSize: 32 },
+          colorAxis: { colors: ['#fbbf24', '#fbbf24'] },
+          sizeAxis: { minValue: 1, minSize: 8, maxSize: 18 },
           legend: 'none',
+          magnifyingGlass: { enable: false },
+          tooltip: { trigger: 'focus' },
           width: w,
           height: w * 397 / 800,
         });
@@ -110,9 +112,9 @@
           `${data.total} total ${data.total === 1 ? 'visit' : 'visits'} from ${n} ${n === 1 ? 'city' : 'cities'}`;
 
         const rows = n > 0
-          ? cities.map(c => [c.lat, c.lon, c.count])
-          : [[0, 0, 0]];
-        table = google.visualization.arrayToDataTable([['Lat', 'Long', 'Visits'], ...rows]);
+          ? cities.map(c => [c.country, c.city, c.count])
+          : [['US', 'New York', 0]];
+        table = google.visualization.arrayToDataTable([['Country', 'City', 'Visits'], ...rows]);
         chart = new google.visualization.GeoChart(wrap);
         draw();
 
