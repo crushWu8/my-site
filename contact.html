@@ -202,20 +202,51 @@
             .attr('stroke', '#000')
             .attr('stroke-width', 0.3);
 
+          // Project + radius, then run force simulation to avoid overlap
+          const nodes = cities.map(c => {
+            const [x0, y0] = project(c.lon, c.lat);
+            return {
+              ...c,
+              x0, y0,           // anchored "real" position
+              x: x0, y: y0,
+              radius: 2.5 + Math.sqrt(c.count / maxCount) * 3,
+            };
+          });
+          const sim = d3.forceSimulation(nodes)
+            .force('x', d3.forceX(d => d.x0).strength(0.8))
+            .force('y', d3.forceY(d => d.y0).strength(0.8))
+            .force('collide', d3.forceCollide(d => d.radius + 1.5).strength(1))
+            .stop();
+          for (let i = 0; i < 60; i++) sim.tick();
+
+          // Leader lines: from displaced marker back to true location
+          const lines = svg.append('g');
+          nodes.forEach(d => {
+            const dist = Math.hypot(d.x - d.x0, d.y - d.y0);
+            if (dist > 2) {
+              lines.append('line')
+                .attr('x1', d.x0).attr('y1', d.y0)
+                .attr('x2', d.x).attr('y2', d.y)
+                .attr('stroke', '#3b82f6')
+                .attr('stroke-width', 0.8)
+                .attr('opacity', 0.5);
+              lines.append('circle')
+                .attr('cx', d.x0).attr('cy', d.y0).attr('r', 1)
+                .attr('fill', '#3b82f6').attr('opacity', 0.6);
+            }
+          });
+
           const markers = svg.append('g');
-          cities.forEach(c => {
-            const proj = project(c.lon, c.lat);
-            if (!proj) return;
-            const radius = 2.5 + Math.sqrt(c.count / maxCount) * 3;
+          nodes.forEach(d => {
             const circle = markers.append('circle')
-              .attr('cx', proj[0])
-              .attr('cy', proj[1])
-              .attr('r', radius)
+              .attr('cx', d.x)
+              .attr('cy', d.y)
+              .attr('r', d.radius)
               .attr('fill', '#3b82f6')
               .style('cursor', 'pointer')
               .node();
             circle.addEventListener('mouseenter', () => {
-              tip.textContent = `${c.city}, ${c.country} · ${c.count} ${c.count === 1 ? 'visit' : 'visits'}`;
+              tip.textContent = `${d.city}, ${d.country} · ${d.count} ${d.count === 1 ? 'visit' : 'visits'}`;
               positionTip();
               tip.style.display = 'block';
             });
