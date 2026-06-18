@@ -186,8 +186,7 @@ permalink: /contact.html
         svg.append('g').selectAll('path')
           .data(land.features).enter().append('path')
           .attr('d', path)
-          .attr('fill', '#3a4458')
-          .attr('stroke', '#000')
+          .attr('class', 'map-land')
           .attr('stroke-width', 0.3);
 
         // Project + radius, then run force simulation to avoid overlap
@@ -215,12 +214,12 @@ permalink: /contact.html
             lines.append('line')
               .attr('x1', d.x0).attr('y1', d.y0)
               .attr('x2', d.x).attr('y2', d.y)
-              .attr('stroke', '#3b82f6')
+              .attr('class', 'map-line')
               .attr('stroke-width', 0.8)
               .attr('opacity', 0.5);
             lines.append('circle')
               .attr('cx', d.x0).attr('cy', d.y0).attr('r', 1)
-              .attr('fill', '#3b82f6').attr('opacity', 0.6);
+              .attr('class', 'map-marker').attr('opacity', 0.6);
           }
         });
 
@@ -230,7 +229,7 @@ permalink: /contact.html
             .attr('cx', d.x)
             .attr('cy', d.y)
             .attr('r', d.radius)
-            .attr('fill', '#3b82f6')
+            .attr('class', 'map-marker')
             .style('cursor', 'pointer')
             .node();
           circle.addEventListener('mouseenter', () => {

@@ -16,6 +16,11 @@
   --shadow:0 10px 30px rgba(0,0,0,.35);
   --particle:180,200,230;
   --particle-line:100,160,255;
+  --map-land:#3a4458;
+  --map-stroke:#566173;
+  --map-marker:#3b82f6;
+  --tip-bg:#fff;
+  --tip-fg:#111;
 }
 :root[data-theme="light"]{
   --bg:#ffffff;
@@ -33,6 +38,11 @@
   --shadow:0 10px 30px rgba(0,0,0,.08);
   --particle:80,110,150;
   --particle-line:60,110,200;
+  --map-land:#cdd5e0;
+  --map-stroke:#aab3c0;
+  --map-marker:#2563eb;
+  --tip-bg:#1f2937;
+  --tip-fg:#f5f5f5;
 }
 
 *{box-sizing:border-box}
@@ -74,7 +84,11 @@ a:hover{text-decoration:underline}
 .visitors h2{font-size:32px; margin:0 0 12px}
 .visitors-count{color:var(--muted); margin:0 0 20px; font-size:15px; letter-spacing:.2px}
 .map-wrap{position:relative; display:block; width:100%; max-width:800px; aspect-ratio:800/360; margin:0 auto; border-radius:12px; overflow:hidden}
-.visitor-tip{position:absolute; display:none; padding:8px 12px; background:#fff; color:#111; font-family:Georgia,"Times New Roman",Times,serif; font-size:14px; border-radius:6px; box-shadow:0 4px 14px rgba(0,0,0,.35); pointer-events:none; z-index:100; white-space:nowrap}
+.visitor-tip{position:absolute; display:none; padding:8px 12px; background:var(--tip-bg); color:var(--tip-fg); font-family:Georgia,"Times New Roman",Times,serif; font-size:14px; border-radius:6px; box-shadow:0 4px 14px rgba(0,0,0,.35); pointer-events:none; z-index:100; white-space:nowrap}
+/* Visitor map (contact) — theme-driven so colors track light/dark */
+.map-land{fill:var(--map-land); stroke:var(--map-stroke)}
+.map-marker{fill:var(--map-marker)}
+.map-line{stroke:var(--map-marker)}
 
 /* ===== Typography ===== */
 h1{font-size:42px; font-weight:700; margin:0 0 22px}
