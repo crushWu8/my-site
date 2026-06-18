@@ -162,23 +162,27 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
         <div class="pe-fig-head">
           <span class="pe-fig-title">Figure 2 &middot; Item price by device type</span>
         </div>
-        <div class="pe-bars2-cap">Average price per item</div>
-        <div class="pe-bars2">
-          <div class="pe-bar2-col">
-            <div class="pe-bar2-val">&#8377;485</div>
-            <div class="pe-bar2-track"><div class="pe-bar2 teal-bg" style="height:20%"></div></div>
-            <div class="pe-bar2-name">Android</div>
-          </div>
-          <div class="pe-bar2-col">
-            <div class="pe-bar2-val">&#8377;501</div>
-            <div class="pe-bar2-track"><div class="pe-bar2 red-bg" style="height:84%"></div></div>
-            <div class="pe-bar2-name">iPhone</div>
+        <div class="pe-bars2-cap">Average price per item (rupees)</div>
+        <div class="pe-bars2-wrap">
+          <div class="pe-bars2-yaxis"><span>520</span><span>390</span><span>260</span><span>130</span><span>0</span></div>
+          <div class="pe-bars2-plot">
+            <div class="pe-bars2-grid"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="pe-bars2">
+              <div class="pe-bar2-col">
+                <div class="pe-bar2-track"><div class="pe-bar2 teal-bg" style="height:93.3%"><span class="pe-bar2-val">&#8377;485</span></div></div>
+                <div class="pe-bar2-name">Android</div>
+              </div>
+              <div class="pe-bar2-col">
+                <div class="pe-bar2-track"><div class="pe-bar2 red-bg" style="height:96.3%"><span class="pe-bar2-val">&#8377;501</span></div></div>
+                <div class="pe-bar2-name">iPhone</div>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="pe-fig-note">Plus 16 rupees per item. About 2,400 rupees per household per year. Vertical scale starts at 480 rupees.</p>
+        <p class="pe-fig-note">The gap is 16 rupees per item, about 3% more. It looks tiny on the chart because it is tiny per item. The cost adds up to about 2,400 rupees per household per year. Vertical scale starts at 0.</p>
       </figure>
       <div class="pe-fig-read">
-        <p>Across three major Indian delivery platforms, iPhone users paid about 4% more per item on average than Android users.</p>
+        <p>Across three major Indian delivery platforms, iPhone users paid about 3% more per item on average than Android users.</p>
         <p>It looks small. But multiplied across a year of orders, a household pays enough extra, only because it used the wrong phone, to buy 30 kilograms of rice.</p>
       </div>
     </div>
@@ -469,11 +473,18 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 
 /* Fig 2 · bar chart */
 .pe-bars2-cap, .pe-line-cap{font-family:"JetBrains Mono",monospace; font-size:12px; color:#7a756a; margin-bottom:14px}
-.pe-bars2{display:flex; justify-content:center; align-items:flex-end; gap:64px; height:220px; padding:0 20px}
-.pe-bar2-col{display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end; gap:10px; width:120px}
-.pe-bar2-val{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:18px; color:#1a1a1a}
-.pe-bar2-track{width:90px; height:160px; display:flex; align-items:flex-end}
-.pe-bar2{width:100%; border-radius:6px 6px 0 0; transition:height .6s cubic-bezier(.4,0,.2,1)}
+.pe-bars2-wrap{display:flex; gap:12px; align-items:flex-start; padding:8px 0 0}
+.pe-bars2-yaxis{display:flex; flex-direction:column; justify-content:space-between; height:240px; text-align:right;
+  font-family:"JetBrains Mono",monospace; font-size:11px; color:#9a958a; flex:none}
+.pe-bars2-plot{position:relative; flex:1}
+.pe-bars2-grid{position:absolute; left:0; right:0; top:0; height:240px; display:flex; flex-direction:column; justify-content:space-between; pointer-events:none}
+.pe-bars2-grid i{display:block; height:0; border-top:1px dashed #ddd}
+.pe-bars2{display:flex; justify-content:center; align-items:flex-end; gap:80px; padding:0 10px}
+.pe-bar2-col{display:flex; flex-direction:column; align-items:center; gap:12px; width:110px}
+.pe-bar2-track{position:relative; width:90px; height:240px; display:flex; align-items:flex-end}
+.pe-bar2{position:relative; width:100%; border-radius:6px 6px 0 0; transition:height .6s cubic-bezier(.4,0,.2,1)}
+.pe-bar2-val{position:absolute; bottom:100%; left:50%; transform:translateX(-50%); margin-bottom:7px; white-space:nowrap;
+  font-family:"JetBrains Mono",monospace; font-weight:700; font-size:16px; color:#1a1a1a}
 .pe-bar2-name{font-family:"Inter",sans-serif; font-weight:600; font-size:14px; color:#2a2a2a}
 
 /* Fig 3 · line chart */
