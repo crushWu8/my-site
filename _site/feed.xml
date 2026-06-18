@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T14:52:49-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T15:05:51-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
@@ -26,7 +26,7 @@
   <!-- ============ SECTION 2 · 4 vs HUNDREDS ============ -->
   <section class="pe-sec pe-grounded reveal" aria-labelledby="pe-grounded-h">
     <h2 id="pe-grounded-h">It's the same plane ticket.</h2>
-    <p class="pe-lead">In 1985, four factors set its price: season, inventory, fuel cost, and what competitors charged. All about the market.</p>
+    <p class="pe-lead">In 1985, four factors set its price. Season, inventory, fuel cost, and what competitors charged. All about the market.</p>
     <p class="pe-lead"><strong>In 2026, it's hundreds.</strong> Most of them are about <strong>you</strong>.</p>
 
     <div class="pe-compare">
@@ -43,32 +43,27 @@
       <div class="pe-compare-col pe-you-col">
         <div class="pe-col-head">2026 &middot; <span class="red">You</span></div>
         <div class="pe-cloud" id="pe-cloud" role="list" aria-label="47 documented pricing factors"></div>
-        <p class="pe-cloud-hint">Hover or tap any factor.</p>
+        <p class="pe-cloud-hint">Scroll the list. Hover or tap any factor.</p>
       </div>
     </div>
-
-    <blockquote class="pe-pull">
-      Four factors describe the market. Hundreds describe you.<br />
-      <span class="pe-pull-em">That difference is what this whole piece is about.</span>
-    </blockquote>
   </section>
 
   <!-- ============ SECTION 3 · REFRAME ============ -->
   <section class="pe-sec pe-reframe reveal" aria-labelledby="pe-reframe-h">
     <h2 id="pe-reframe-h">This isn't dynamic pricing.</h2>
-    <p>Dynamic pricing has existed since the 1980s. Hotels cost more on weekends, flights cost more at Thanksgiving, supermarkets discount when stock piles up. Prices moved &mdash; but they moved for <em>everyone</em> at once.</p>
-    <p>What's different now is that the price no longer moves for the market. It moves for <em>you</em>. Two people can open the same app in the same second, search the same product, and see different prices &mdash; not because the market changed in that second, but because the algorithm decided they were different buyers.</p>
+    <p>Dynamic pricing has existed since the 1980s. Hotels cost more on weekends, flights cost more at Thanksgiving, supermarkets discount when stock piles up. Prices moved, but they moved for <em>everyone</em> at once.</p>
+    <p>What's different now is that the price no longer moves for the market. It moves for <em>you</em>. Two people can open the same app in the same second, search the same product, and see different prices. Not because the market changed in that second, but because the algorithm decided they were different buyers.</p>
     <p class="pe-questions">
-      <span class="pe-q-old">The old question was: <em>what is this product worth on the market?</em></span><br />
-      <span class="pe-q-new">The new question is: <em>what is the most this person will pay?</em></span>
+      <span class="pe-q-old">The old question was about the market. <em>What is this product worth?</em></span><br />
+      <span class="pe-q-new">The new question is about you. <em>What is the most you will pay?</em></span>
     </p>
     <p class="pe-anchor">Those are not the same question.<br />The gap between them is where your money goes.</p>
   </section>
 
   <!-- ============ SECTION 4 · YOUR PRICE PORTRAIT ============ -->
   <section class="pe-sec pe-portrait reveal" aria-labelledby="pe-portrait-h">
-    <h2 id="pe-portrait-h">So &mdash; what's your price?</h2>
-    <p>The algorithm isn't deciding how much to charge <em>you</em>. It's deciding how much to charge <em>someone like you</em>. And "someone like you" is assembled from your device, location, time, and behavior. Each signal looks harmless on its own. Stacked together, they sketch a portrait &mdash; and that portrait sets the price you see.</p>
+    <h2 id="pe-portrait-h">So, what's your price?</h2>
+    <p>The algorithm isn't deciding how much to charge <em>you</em>. It's deciding how much to charge <em>someone like you</em>. And "someone like you" is assembled from your device, location, time, and behavior. Each signal looks harmless on its own. Stacked together, they sketch a portrait, and that portrait sets the price you see.</p>
     <p>Flip the five switches below and see what your portrait is worth.</p>
     <p class="pe-foot-note">Percentages are illustrative values calibrated from price gaps reported across multiple studies. The real numbers inside any given algorithm are trade secrets.</p>
 
@@ -178,7 +173,13 @@
 .pe-col-head{font-family:"JetBrains Mono",monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--pe-muted); margin-bottom:20px}
 .pe-market-list{list-style:none; margin:0; padding:0}
 .pe-market-list li{font-size:22px; font-weight:600; color:var(--pe-strong); padding:10px 0; border-bottom:1px solid var(--pe-line)}
-.pe-cloud{display:flex; flex-wrap:wrap; gap:8px}
+.pe-cloud{display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start;
+  max-height:340px; overflow-y:auto; padding:16px; border:1px solid var(--pe-line);
+  border-radius:12px; background:var(--pe-surface);
+  scrollbar-width:thin; scrollbar-color:var(--pe-chip-border) transparent}
+.pe-cloud::-webkit-scrollbar{width:8px}
+.pe-cloud::-webkit-scrollbar-thumb{background:var(--pe-chip-border); border-radius:8px}
+.pe-cloud::-webkit-scrollbar-track{background:transparent}
 .pe-tag{font-family:"JetBrains Mono",monospace; font-size:12.5px; padding:6px 10px; border-radius:6px;
   background:var(--pe-chip); border:1px solid var(--pe-chip-border); color:var(--pe-text); cursor:default;
   transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease}
@@ -199,8 +200,6 @@
 .pe-tooltip .pe-tt-src{display:block; margin-top:8px; font-family:"JetBrains Mono",monospace; font-size:11px; color:#8a8a8a}
 
 /* pull quote */
-.pe-pull{border:none; margin:56px 0 0; padding:0; font-size:clamp(20px,3vw,28px)!important; line-height:1.4; color:var(--pe-strong); font-weight:500}
-.pe-pull-em{color:var(--pe-red); font-weight:700}
 
 /* ---------- Section 3 · Reframe ---------- */
 .pe-questions{margin:32px 0!important}
@@ -279,14 +278,14 @@
     ["Screen size","Larger, premium screens nudge the price up.","FTC 6(b)"],
     ["Screen resolution","High-DPI displays signal a premium device.","FTC 6(b)"],
     ["Language setting","Your locale decides which price tier you land in.","FTC 6(b)"],
-    ["Time-zone setting","Reveals where &mdash; and when &mdash; you really are.","FTC 6(b)"],
-    ["Battery level","Low battery reads as urgency &rarr; price goes up.","Kumar et al., 2026"],
+    ["Time-zone setting","Reveals where and when you really are.","FTC 6(b)"],
+    ["Battery level","Low battery reads as urgency, so the price goes up.","Kumar et al., 2026"],
     ["IP address","Maps you to a region and a price band.","FTC 6(b)"],
     ["Precise GPS location","Pins you to a neighborhood-level price.","FTC 6(b)"],
     ["Home ZIP code","Used to infer income and adjust the quote.","FTC 6(b)"],
     ["Neighborhood income","Wealthier blocks get higher quotes.","FTC 6(b)"],
     ["Neighborhood crime rate","Feeds risk and urgency models.","Kumar et al., 2026"],
-    ["Nearby service density","Fewer alternatives nearby &rarr; higher price.","Kumar et al., 2026"],
+    ["Nearby service density","Fewer alternatives nearby means a higher price.","Kumar et al., 2026"],
     ["Country","Sets your national price tier.","FTC 6(b)"],
     ["City","City-level demand shifts your price.","FTC 6(b)"],
     ["Distance to a store","Far from a store means less ability to walk away.","FTC 6(b)"],
@@ -336,7 +335,7 @@
     var t = document.createElement('span');
     t.className = 'pe-tag'; t.textContent = f[0];
     t.setAttribute('role','listitem'); t.tabIndex = 0;
-    var html = f[1] + '<span class="pe-tt-src">Source: ' + f[2] + '</span>';
+    var html = f[1] + '<span class="pe-tt-src">' + f[2] + '</span>';
     function place(ev){
       var rect = t.getBoundingClientRect();
       var px = ev.clientX || (rect.left + rect.width/2);
@@ -356,7 +355,7 @@
   /* ---------- Section 4 · price calculator ---------- */
   var BASELINE = 12.00, WORST = 34.80;
   var SWITCHES = [
-    {key:'phone', label:'Phone', info:'iPhone users have been quoted ~4% more in documented cases (Mone et al., 2026).',
+    {key:'phone', label:'Phone', info:'iPhone users have been quoted about 4% more in documented cases (Mone et al., 2026).',
      opts:[['iPhone (new)',.08],['iPhone (older)',.04],['Android (flagship)',.03],['Android (basic)',0]], def:0},
     {key:'area', label:'Neighborhood', info:'ZIP code and block-level income are used to infer how much you can pay (FTC 6(b)).',
      opts:[['High-income',.10],['Middle-income',.03],['Low-income',0]], def:1},
@@ -364,7 +363,7 @@
      opts:[['Work hours',0],['Evening',.03],['Late night',.06],['Weekend',.02]], def:1},
     {key:'search', label:'Searches', info:'More searches signal stronger intent, which models price higher (Shiller, 2020).',
      opts:[['1st time',0],['2-4 times',.05],['5+ times',.09]], def:1},
-    {key:'battery', label:'Battery', info:'Low battery reads as urgency &mdash; you can’t shop around forever (Kumar et al., 2026).',
+    {key:'battery', label:'Battery', info:'Low battery reads as urgency, and you cannot shop around forever (Kumar et al., 2026).',
      opts:[['Above 50%',0],['20-50%',.06],['Below 20%',0.12]], def:1}
   ];
   var state = {};
@@ -416,8 +415,8 @@
     amtWorst.textContent = '$' + WORST.toFixed(2);
     var diff = you - BASELINE, pct = Math.round(diff/BASELINE*100);
     deltaEl.innerHTML = diff <= 0.005
-      ? 'You’re at the baseline price &mdash; for now.'
-      : 'You’d pay <span class="red">$' + diff.toFixed(2) + '</span> more than baseline &mdash; that’s <span class="red">' + pct + '% more</span>.';
+      ? 'You’re at the baseline price, for now.'
+      : 'You’d pay <span class="red">$' + diff.toFixed(2) + '</span> more than baseline. That’s <span class="red">' + pct + '% more</span>.';
     if (pct > 50 && prevPct <= 50){ amtYou.classList.remove('pe-shake'); void amtYou.offsetWidth; amtYou.classList.add('pe-shake'); }
     prevPct = pct;
   }
