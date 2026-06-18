@@ -240,17 +240,11 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
             <text x="570" y="232" fill="#06B6A0" text-anchor="end" font-weight="700">Other markets</text>
           </g>
         </svg>
-        <ul class="pe-events">
-          <li><span class="pe-ev-yr">2017</span> RealPage expands widely</li>
-          <li><span class="pe-ev-yr">2022</span> ProPublica investigation</li>
-          <li><span class="pe-ev-yr">2024</span> DOJ files suit</li>
-          <li><span class="pe-ev-yr">2025</span> DOJ settlement, three years of oversight</li>
-        </ul>
         <p class="pe-fig-note">Seattle case. Rents rose 33% in one year and 42% in total since 2012. The class action estimates RealPage markets run 5 to 7% above competitive markets.</p>
       </figure>
       <div class="pe-fig-read">
-        <p>In the U.S. Department of Justice complaint against RealPage filed in 2024, one landlord is quoted directly. Within a week of adopting RealPage software we started raising rents, and within 11 months we raised them by more than 25%.</p>
-        <p>A ProPublica investigation found that in parts of Seattle, 10 landlords controlled 70% of the apartments, and every one of them used RealPage. The class action estimates that markets using the algorithm have rents 5 to 7% higher than competitive markets. In November 2025, RealPage settled with the DOJ and accepted three years of oversight.</p>
+        <p>RealPage's YieldStar software gives landlords rent pricing recommendations. When many landlords in the same area rely on the same algorithm, prices may no longer come only from independent competition. On the surface, landlords are not sitting together to set rents. But in practice, they may all be following the same system's advice.</p>
+        <p>For tenants, the problem is not only that rents may rise. The deeper problem is that competition becomes harder to see. Tenants may think they are comparing prices across different apartments, but those prices may be shaped by the same algorithmic logic.</p>
       </div>
     </div>
 
@@ -490,9 +484,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 
 /* Fig 3 · line chart */
 .pe-linechart{width:100%; height:auto; display:block}
-.pe-events{list-style:none; margin:20px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:8px 24px}
-.pe-events li{font-size:13px; color:#2a2a2a; border:none; padding:0}
-.pe-ev-yr{font-family:"JetBrains Mono",monospace; font-weight:700; color:#E63946; margin-right:8px}
 
 /* Fig 4 · stacked concept */
 .pe-stack{display:flex; align-items:flex-end; justify-content:center; gap:0; height:280px; padding:0 10px}
@@ -508,7 +499,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 .pe-stack-arrow::after{content:""; width:100%; height:2px; background:#1a1a1a; position:relative}
 .pe-stack-arrow-label{font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:700; color:#1a1a1a; margin-bottom:8px; text-align:center}
 @media(max-width:560px){
-  .pe-events{grid-template-columns:1fr}
   .pe-stack{gap:0} .pe-stack-arrow{min-width:80px}
   .pe-bars2{gap:36px}
 }
