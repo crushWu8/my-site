@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T15:45:21-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T16:27:26-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
@@ -93,7 +93,7 @@
 
   <!-- ============ SECTION 5 · THE COST ============ -->
   <section class="pe-sec pe-cost reveal" aria-labelledby="pe-cost-h">
-    <h2 id="pe-cost-h">When the price becomes a portrait, who pays the most?</h2>
+    <h2 id="pe-cost-h">When Your Data Becomes the Price</h2>
     <p>Algorithmic pricing does not take a little more from everyone evenly. It finds the people who cannot walk away, cannot see clearly, and cannot compare, and it charges them more. The four figures below are what that targeted harm looks like.</p>
     <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations. Figure 4 is a concept visualization based on the research literature, and it is labeled as such.</p>
 
@@ -104,21 +104,43 @@
           <span class="pe-fig-title">Figure 1 &middot; Lower battery, higher urgency</span>
           <span class="pe-badge pe-badge-real">REAL QUOTE</span>
         </div>
-        <div class="pe-batt-row">
-          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:100%;background:#3bb273"></span></span><span class="pe-batt-pct">100%</span></div>
-          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:60%;background:#e3c000"></span></span><span class="pe-batt-pct">60%</span></div>
-          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:30%;background:#e08a2b"></span></span><span class="pe-batt-pct">30%</span></div>
-          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:8%;background:#E63946"></span></span><span class="pe-batt-pct">5%</span></div>
+        <div class="pe-bars2-cap">Likelihood a user accepts surge pricing</div>
+        <div class="pe-bc-sub">Qualitative, based on Uber's internal finding</div>
+        <div class="pe-battchart">
+          <div class="pe-bc-row">
+            <div class="pe-bc-label"><span class="pe-batt-icon sm"><span class="pe-batt-fill" style="width:100%;background:#06B6A0"></span></span>100%</div>
+            <div class="pe-bc-bars">
+              <div class="pe-bc-track"><div class="pe-bc-fill" style="width:26%;background:#06B6A0"></div></div>
+              <div class="pe-bc-mono">"I'll wait 10 to 15 minutes for the surge to drop."</div>
+            </div>
+          </div>
+          <div class="pe-bc-row">
+            <div class="pe-bc-label"><span class="pe-batt-icon sm"><span class="pe-batt-fill" style="width:60%;background:#E3B505"></span></span>60%</div>
+            <div class="pe-bc-bars">
+              <div class="pe-bc-track"><div class="pe-bc-fill" style="width:50%;background:#E3B505"></div></div>
+              <div class="pe-bc-mono">"Hmm, I might wait a bit."</div>
+            </div>
+          </div>
+          <div class="pe-bc-row">
+            <div class="pe-bc-label"><span class="pe-batt-icon sm"><span class="pe-batt-fill" style="width:30%;background:#E8862B"></span></span>30%</div>
+            <div class="pe-bc-bars">
+              <div class="pe-bc-track"><div class="pe-bc-fill" style="width:76%;background:#E8862B"></div></div>
+              <div class="pe-bc-mono">"I should probably just take it."</div>
+            </div>
+          </div>
+          <div class="pe-bc-row">
+            <div class="pe-bc-label"><span class="pe-batt-icon sm"><span class="pe-batt-fill" style="width:8%;background:#E63946"></span></span>5%</div>
+            <div class="pe-bc-bars">
+              <div class="pe-bc-track"><div class="pe-bc-fill" style="width:100%;background:#E63946"></div><span class="pe-bc-flag">icon turns red</span></div>
+              <div class="pe-bc-mono">"I'll pay whatever. I need to get home."</div>
+            </div>
+          </div>
         </div>
+        <hr class="pe-fig-rule" />
         <blockquote class="pe-quote">
           "Battery is one of the strongest predictors of how sensitive a user is to surge pricing."
-          <cite>Keith Chen, former head of economic research at Uber. NPR Hidden Brain, May 2016.</cite>
+          <cite>Keith Chen, former Uber head of economic research. NPR Hidden Brain, 2016.</cite>
         </blockquote>
-        <ul class="pe-facts">
-          <li>Below 5%, the iPhone battery icon turns red.</li>
-          <li>Users stop waiting for the surge to drop.</li>
-          <li>They accept the higher price.</li>
-        </ul>
         <p class="pe-fig-kicker">Uber denies using this signal to set prices. Uber admits it has been monitoring it.</p>
       </figure>
       <div class="pe-fig-read">
@@ -425,21 +447,27 @@
 .pe-fig-read{margin:0 0 4px}
 .pe-fig-read p{font-size:15px!important; color:var(--pe-text); margin:0 0 12px}
 .pe-fig-note{font-family:"JetBrains Mono",monospace; font-size:11px!important; color:#7a756a!important; margin:18px 0 0!important; line-height:1.5}
-.pe-fig-kicker{font-weight:700; color:#1a1a1a!important; margin:18px 0 0!important; font-size:15px!important}
+.pe-fig-kicker{font-weight:700; color:#1a1a1a!important; margin:20px 0 0!important; font-size:14px!important}
 
-/* Fig 1 · battery + quote */
-.pe-batt-row{display:flex; gap:22px; flex-wrap:wrap; justify-content:center; margin:8px 0 24px}
-.pe-batt{display:flex; flex-direction:column; align-items:center; gap:8px}
-.pe-batt-icon{position:relative; width:64px; height:30px; border:2px solid #2a2a2a; border-radius:6px; padding:3px; display:block}
+/* Fig 1 · battery bar chart */
+.pe-batt-icon{position:relative; width:64px; height:30px; border:2px solid #2a2a2a; border-radius:6px; padding:3px; display:inline-block; flex:none}
 .pe-batt-icon::after{content:""; position:absolute; right:-7px; top:8px; width:4px; height:12px; background:#2a2a2a; border-radius:0 2px 2px 0}
 .pe-batt-fill{display:block; height:100%; border-radius:3px}
-.pe-batt-pct{font-family:"JetBrains Mono",monospace; font-size:13px; font-weight:700; color:#2a2a2a}
-.pe-quote{margin:0; padding:20px 22px; background:#fffdf8; border:1px solid #e6e1d6; border-radius:10px;
-  font-family:Georgia,"Times New Roman",serif; font-size:18px; font-style:italic; line-height:1.5; color:#1a1a1a}
-.pe-quote cite{display:block; margin-top:14px; font-style:normal; font-family:"JetBrains Mono",monospace; font-size:12px; color:#7a756a}
-.pe-facts{list-style:none; margin:20px 0 0; padding:0}
-.pe-facts li{position:relative; padding:6px 0 6px 24px; font-size:15px; color:#2a2a2a; border:none}
-.pe-facts li::before{content:""; position:absolute; left:2px; top:13px; width:8px; height:8px; border-radius:50%; background:#E63946}
+.pe-batt-icon.sm{width:34px; height:17px; border-width:1.5px; padding:2px; border-radius:4px}
+.pe-batt-icon.sm::after{right:-4px; top:5px; width:3px; height:7px}
+.pe-bc-sub{font-family:"JetBrains Mono",monospace; font-size:11px; color:#9a958a; margin:-8px 0 20px}
+.pe-battchart{display:grid; gap:18px; margin:0 0 4px}
+.pe-bc-row{display:grid; grid-template-columns:88px 1fr; gap:16px; align-items:center}
+.pe-bc-label{display:flex; align-items:center; gap:9px; font-family:"JetBrains Mono",monospace; font-weight:700; font-size:13px; color:#2a2a2a}
+.pe-bc-bars{display:flex; flex-direction:column; gap:6px; min-width:0}
+.pe-bc-track{position:relative; height:22px; background:#ebe7de; border-radius:6px; overflow:hidden}
+.pe-bc-fill{height:100%; border-radius:6px; transition:width .6s cubic-bezier(.4,0,.2,1)}
+.pe-bc-flag{position:absolute; right:10px; top:50%; transform:translateY(-50%); font-family:"JetBrains Mono",monospace; font-size:10px; font-weight:700; color:#fff; letter-spacing:.04em}
+.pe-bc-mono{font-family:Georgia,"Times New Roman",serif; font-style:italic; font-size:14px; color:#5a554c}
+.pe-fig-rule{border:none; border-top:1px solid #e6e1d6; margin:24px 0}
+.pe-quote{margin:0; padding:2px 0 2px 16px; border-left:3px solid #d9d3c7; background:none;
+  font-family:Georgia,"Times New Roman",serif; font-size:16px; font-style:italic; line-height:1.5; color:#3a3a3a}
+.pe-quote cite{display:block; margin-top:10px; font-style:normal; font-family:"JetBrains Mono",monospace; font-size:11px; color:#8a857a}
 
 /* Fig 2 · bar chart */
 .pe-bars2-cap, .pe-line-cap{font-family:"JetBrains Mono",monospace; font-size:12px; color:#7a756a; margin-bottom:14px}
