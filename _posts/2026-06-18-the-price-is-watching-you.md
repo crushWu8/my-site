@@ -33,17 +33,18 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   <section class="pe-sec pe-grounded reveal" aria-labelledby="pe-grounded-h">
     <h2 id="pe-grounded-h">It's the same plane ticket.</h2>
     <p class="pe-lead">In 1985, four factors set its price. Season, inventory, fuel cost, and what competitors charged. All about the market.</p>
-    <p class="pe-lead"><strong>In 2026, it's hundreds.</strong> Most of them are about <strong>you</strong>.</p>
+    <p class="pe-lead">In 2026, it's hundreds. Most of them are about you.</p>
 
     <div class="pe-compare">
       <div class="pe-compare-col pe-market-col">
         <div class="pe-col-head">1985 &middot; <span class="teal">Market</span></div>
-        <ul class="pe-market-list">
-          <li>Season</li>
-          <li>Inventory</li>
-          <li>Fuel cost</li>
-          <li>Competitors</li>
-        </ul>
+        <div class="pe-cloud pe-cloud-market" role="list" aria-label="4 traditional pricing factors">
+          <span class="pe-tag pe-tag-market" role="listitem">Season</span>
+          <span class="pe-tag pe-tag-market" role="listitem">Inventory</span>
+          <span class="pe-tag pe-tag-market" role="listitem">Fuel cost</span>
+          <span class="pe-tag pe-tag-market" role="listitem">Competitors</span>
+        </div>
+        <p class="pe-cloud-hint">Four factors, all about the market.</p>
       </div>
       <div class="pe-compare-div" aria-hidden="true"></div>
       <div class="pe-compare-col pe-you-col">
@@ -171,12 +172,11 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 .pe-compare{display:grid; grid-template-columns:200px 1px 1fr; gap:32px; margin:48px 0; align-items:start}
 .pe-compare-div{background:var(--pe-line); width:1px; align-self:stretch}
 .pe-col-head{font-family:"JetBrains Mono",monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--pe-muted); margin-bottom:20px}
-.pe-market-list{list-style:none; margin:0; padding:0}
-.pe-market-list li{font-size:22px; font-weight:600; color:var(--pe-strong); padding:10px 0; border-bottom:1px solid var(--pe-line)}
 .pe-cloud{display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start;
   max-height:340px; overflow-y:auto; padding:16px; border:1px solid var(--pe-line);
   border-radius:12px; background:var(--pe-surface);
   scrollbar-width:thin; scrollbar-color:var(--pe-chip-border) transparent}
+.pe-cloud-market{max-height:none; overflow:visible}
 .pe-cloud::-webkit-scrollbar{width:8px}
 .pe-cloud::-webkit-scrollbar-thumb{background:var(--pe-chip-border); border-radius:8px}
 .pe-cloud::-webkit-scrollbar-track{background:transparent}
@@ -184,6 +184,7 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   background:var(--pe-chip); border:1px solid var(--pe-chip-border); color:var(--pe-text); cursor:default;
   transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease}
 .pe-tag:hover, .pe-tag:focus-visible{background:rgba(230,57,70,.14); border-color:var(--pe-red); color:var(--pe-strong); transform:translateY(-1px); outline:none}
+.pe-tag-market:hover{background:rgba(6,182,160,.14); border-color:var(--pe-teal); color:var(--pe-strong)}
 .pe-cloud-hint{font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--pe-muted); margin-top:16px!important}
 @media(max-width:760px){
   .pe-compare{grid-template-columns:1fr; gap:36px}
