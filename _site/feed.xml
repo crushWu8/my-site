@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T15:05:51-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T15:10:23-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
 
@@ -49,15 +49,9 @@
   </section>
 
   <!-- ============ SECTION 3 · REFRAME ============ -->
-  <section class="pe-sec pe-reframe reveal" aria-labelledby="pe-reframe-h">
-    <h2 id="pe-reframe-h">This isn't dynamic pricing.</h2>
-    <p>Dynamic pricing has existed since the 1980s. Hotels cost more on weekends, flights cost more at Thanksgiving, supermarkets discount when stock piles up. Prices moved, but they moved for <em>everyone</em> at once.</p>
-    <p>What's different now is that the price no longer moves for the market. It moves for <em>you</em>. Two people can open the same app in the same second, search the same product, and see different prices. Not because the market changed in that second, but because the algorithm decided they were different buyers.</p>
-    <p class="pe-questions">
-      <span class="pe-q-old">The old question was about the market. <em>What is this product worth?</em></span><br />
-      <span class="pe-q-new">The new question is about you. <em>What is the most you will pay?</em></span>
-    </p>
-    <p class="pe-anchor">Those are not the same question.<br />The gap between them is where your money goes.</p>
+  <section class="pe-sec pe-reframe reveal" aria-label="How algorithmic pricing differs">
+    <p>Traditional pricing typically views consumers as a collective group. Stores set a uniform price that fluctuates based on seasonality and demand. While such practices can sometimes cause consumer dissatisfaction, customers generally understand the reasons behind the price changes.</p>
+    <p>Algorithmic pricing, however, renders this process more personalized yet far less transparent. Companies leverage vast amounts of data to predict an individual consumer's willingness to pay, pushing the price as close as possible to the upper limit of what that person is willing to accept. In doing so, consumers lose certain rights that were once crucial, including the right to be informed, the ability to compare prices and make choices, and the capacity to judge whether they are being treated fairly.</p>
   </section>
 
   <!-- ============ SECTION 4 · YOUR PRICE PORTRAIT ============ -->
@@ -200,11 +194,6 @@
 .pe-tooltip .pe-tt-src{display:block; margin-top:8px; font-family:"JetBrains Mono",monospace; font-size:11px; color:#8a8a8a}
 
 /* pull quote */
-
-/* ---------- Section 3 · Reframe ---------- */
-.pe-questions{margin:32px 0!important}
-.pe-q-old{color:var(--pe-muted)} .pe-q-new{color:var(--pe-red)}
-.pe-anchor{text-align:center; font-size:clamp(22px,3.2vw,30px)!important; font-weight:600; color:var(--pe-strong); margin:48px auto 0!important; max-width:24ch; line-height:1.35}
 
 /* ---------- Section 4 · Calculator ---------- */
 .pe-foot-note{font-family:"JetBrains Mono",monospace; font-size:12px!important; color:var(--pe-muted); border-left:2px solid var(--pe-line); padding-left:14px; margin-top:8px!important}
