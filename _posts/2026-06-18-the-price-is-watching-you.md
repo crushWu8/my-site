@@ -101,7 +101,7 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   <section class="pe-sec pe-cost reveal" aria-labelledby="pe-cost-h">
     <h2 id="pe-cost-h">When Your Data Becomes the Price</h2>
     <p>Algorithmic pricing does not take a little more from everyone evenly. It finds the people who cannot walk away, cannot see clearly, and cannot compare, and it charges them more. The four figures below are what that targeted harm looks like.</p>
-    <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations. Figure 4 is a concept visualization based on the research literature, not a plot of measured values.</p>
+    <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations.</p>
 
     <!-- Figure 1 · Battery quote -->
     <div class="pe-fig reveal">
