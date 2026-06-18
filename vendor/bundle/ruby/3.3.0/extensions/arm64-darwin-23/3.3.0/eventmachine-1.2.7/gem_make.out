@@ -1,0 +1,19 @@
+current directory: /Users/haomingan/Desktop/my-site/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/haomingan/.rbenv/versions/3.3.8/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/haomingan/Desktop/my-site/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260618-70240-wqlii4 sitelibdir\=./.gem.20260618-70240-wqlii4 clean
+
+current directory: /Users/haomingan/Desktop/my-site/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260618-70240-wqlii4 sitelibdir\=./.gem.20260618-70240-wqlii4
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/haomingan/Desktop/my-site/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260618-70240-wqlii4 sitelibdir\=./.gem.20260618-70240-wqlii4 install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20260618-70240-wqlii4
+
+current directory: /Users/haomingan/Desktop/my-site/vendor/bundle/ruby/3.3.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= sitearchdir\=./.gem.20260618-70240-wqlii4 sitelibdir\=./.gem.20260618-70240-wqlii4 clean

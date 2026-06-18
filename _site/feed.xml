@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4001/my-site/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4001/my-site/" rel="alternate" type="text/html" /><updated>2026-06-18T14:35:43-04:00</updated><id>http://localhost:4001/my-site/feed.xml</id><title type="html">Shanghao Wu</title><subtitle>Personal site of Shanghao Wu — mathematics student exploring data, modeling, and visualization.</subtitle><author><name>Shanghao Wu</name></author><entry><title type="html">The Price Is Watching You</title><link href="http://localhost:4001/my-site/blog/the-price-is-watching-you/" rel="alternate" type="text/html" title="The Price Is Watching You" /><published>2026-06-18T00:00:00-04:00</published><updated>2026-06-18T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/the-price-is-watching-you</id><content type="html" xml:base="http://localhost:4001/my-site/blog/the-price-is-watching-you/"><![CDATA[<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+
+<div class="pe">
+
+  <!-- ============ SECTION 1 · HOOK ============ -->
+  <section class="pe-sec pe-hook reveal" aria-labelledby="pe-hook-h">
+    <div class="pe-hook-grid">
+      <div class="pe-hook-4">
+        <div class="pe-num-sm">4</div>
+        <p>In 1985, just four things decided the price of a plane ticket.</p>
+      </div>
+      <div class="pe-hook-hundreds">
+        <div class="pe-num-lg">hundreds</div>
+        <p>In 2026, it's hundreds.</p>
+      </div>
+    </div>
+    <div class="pe-rule"></div>
+    <p class="pe-hook-foot" id="pe-hook-h">And many of them are about you.</p>
+    <div class="pe-down" aria-hidden="true">&darr;</div>
+  </section>
+
+  <!-- ============ SECTION 2 · 4 vs HUNDREDS ============ -->
+  <section class="pe-sec pe-grounded reveal" aria-labelledby="pe-grounded-h">
+    <h2 id="pe-grounded-h">It's the same plane ticket.</h2>
+    <p class="pe-lead">In 1985, four factors set its price: season, inventory, fuel cost, and what competitors charged. All about the market.</p>
+    <p class="pe-lead"><strong>In 2026, it's hundreds.</strong> Most of them are about <strong>you</strong>.</p>
+
+    <div class="pe-compare">
+      <div class="pe-compare-col pe-market-col">
+        <div class="pe-col-head">1985 &middot; <span class="teal">Market</span></div>
+        <ul class="pe-market-list">
+          <li>Season</li>
+          <li>Inventory</li>
+          <li>Fuel cost</li>
+          <li>Competitors</li>
+        </ul>
+      </div>
+      <div class="pe-compare-div" aria-hidden="true"></div>
+      <div class="pe-compare-col pe-you-col">
+        <div class="pe-col-head">2026 &middot; <span class="red">You</span></div>
+        <div class="pe-cloud" id="pe-cloud" role="list" aria-label="47 documented pricing factors"></div>
+        <p class="pe-cloud-hint">Hover or tap any factor.</p>
+      </div>
+    </div>
+
+    <blockquote class="pe-pull">
+      Four factors describe the market. Hundreds describe you.<br />
+      <span class="pe-pull-em">That difference is what this whole piece is about.</span>
+    </blockquote>
+  </section>
+
+  <!-- ============ SECTION 3 · REFRAME ============ -->
+  <section class="pe-sec pe-reframe reveal" aria-labelledby="pe-reframe-h">
+    <h2 id="pe-reframe-h">This isn't dynamic pricing.</h2>
+    <p>Dynamic pricing has existed since the 1980s. Hotels cost more on weekends, flights cost more at Thanksgiving, supermarkets discount when stock piles up. Prices moved &mdash; but they moved for <em>everyone</em> at once.</p>
+    <p>What's different now is that the price no longer moves for the market. It moves for <em>you</em>. Two people can open the same app in the same second, search the same product, and see different prices &mdash; not because the market changed in that second, but because the algorithm decided they were different buyers.</p>
+    <p class="pe-questions">
+      <span class="pe-q-old">The old question was: <em>what is this product worth on the market?</em></span><br />
+      <span class="pe-q-new">The new question is: <em>what is the most this person will pay?</em></span>
+    </p>
+    <p class="pe-anchor">Those are not the same question.<br />The gap between them is where your money goes.</p>
+  </section>
+
+  <!-- ============ SECTION 4 · YOUR PRICE PORTRAIT ============ -->
+  <section class="pe-sec pe-portrait reveal" aria-labelledby="pe-portrait-h">
+    <h2 id="pe-portrait-h">So &mdash; what's your price?</h2>
+    <p>The algorithm isn't deciding how much to charge <em>you</em>. It's deciding how much to charge <em>someone like you</em>. And "someone like you" is assembled from your device, location, time, and behavior. Each signal looks harmless on its own. Stacked together, they sketch a portrait &mdash; and that portrait sets the price you see.</p>
+    <p>Flip the five switches below and see what your portrait is worth.</p>
+    <p class="pe-foot-note">Percentages are illustrative values calibrated from price gaps reported across multiple studies. The real numbers inside any given algorithm are trade secrets.</p>
+
+    <div class="pe-calc">
+      <div class="pe-switches" id="pe-switches"></div>
+
+      <div class="pe-bars" id="pe-bars">
+        <div class="pe-bar-row">
+          <div class="pe-bar-label">Baseline price <span class="pe-bar-sub">fair market price</span></div>
+          <div class="pe-bar-track"><div class="pe-bar-fill teal-bg" id="pe-bar-base"></div></div>
+          <div class="pe-bar-amt teal" id="pe-amt-base">$12.00</div>
+        </div>
+        <div class="pe-bar-row pe-bar-you">
+          <div class="pe-bar-label">Your algorithmic price</div>
+          <div class="pe-bar-track"><div class="pe-bar-fill red-bg" id="pe-bar-you"></div></div>
+          <div class="pe-bar-amt red big" id="pe-amt-you">$15.00</div>
+        </div>
+        <div class="pe-bar-row">
+          <div class="pe-bar-label">Worst-case price <span class="pe-bar-sub">a portrait flagged "easy to exploit"</span></div>
+          <div class="pe-bar-track"><div class="pe-bar-fill darkred-bg" id="pe-bar-worst"></div></div>
+          <div class="pe-bar-amt darkred" id="pe-amt-worst">$34.80</div>
+        </div>
+        <div class="pe-delta" id="pe-delta"></div>
+      </div>
+    </div>
+
+    <div class="pe-reveal-block">
+      <h3>What just happened?</h3>
+      <p>The algorithm read five signals about you and assembled a portrait. Each one barely moves the price on its own. A premium phone, maybe +8%. Low battery, another +12%. Late at night, +6%. A fifth search, +9%.</p>
+      <p>But stacked together, the same product can cost you twice what someone else pays.</p>
+      <p class="pe-kicker">You never see this math. You only see a price.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <section class="pe-sec pe-sources reveal" aria-labelledby="pe-sources-h">
+    <h3 id="pe-sources-h">Sources</h3>
+    <ol class="pe-refs">
+      <li>Federal Trade Commission. "FTC Surveillance Pricing 6(b) Study: Research Summaries &mdash; A Staff Perspective." January 2025.</li>
+      <li>Kumar, Krish, et al. "Research Problem Statement." Unpublished manuscript, 2026.</li>
+      <li>McBride, John. Quoted in "The smart AI behind effective airline revenue management." <em>PhocusWire</em>, 17 December 2024.</li>
+      <li>Mone, A., et al. "AI Price Tags and Privacy: When Your Data Sets Your Price." <em>Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery</em>, vol. 16, no. 1, 2026, p. e70070.</li>
+      <li>Shiller, Benjamin Reed. "Approximating Purchase Propensities and Reservation Prices from Broad Consumer Tracking." <em>International Economic Review</em>, vol. 61, no. 2, 2020, pp. 847&ndash;870.</li>
+    </ol>
+  </section>
+
+</div>
+
+<div class="pe-tooltip" id="pe-tooltip" role="tooltip" aria-hidden="true"></div>
+
+<style>
+/* ====================== Surveillance-pricing essay ====================== */
+.pe{
+  --pe-bg:#0A0A0A; --pe-red:#E63946; --pe-darkred:#8f1a25;
+  --pe-teal:#06B6A0; --pe-yellow:#F4D35E;
+  --pe-text:#E5E5E5; --pe-muted:#8a8a8a; --pe-line:#262626;
+  position:relative; left:50%; right:50%; width:100vw; max-width:100vw;
+  margin-left:-50vw; margin-right:-50vw;
+  background:var(--pe-bg); color:var(--pe-text);
+  font-family:"Inter",system-ui,-apple-system,sans-serif; line-height:1.6;
+  margin-top:-20px;
+}
+.pe *{box-sizing:border-box}
+.pe .red{color:var(--pe-red)} .pe .teal{color:var(--pe-teal)}
+.pe .darkred{color:var(--pe-darkred)}
+.pe-sec{max-width:920px; margin:0 auto; padding:96px 24px}
+.pe h2{font-family:"Inter"; font-weight:900; font-size:clamp(28px,5vw,46px); line-height:1.1; letter-spacing:-.02em; margin:0 0 28px}
+.pe h3{font-family:"Inter"; font-weight:800; font-size:24px; margin:0 0 16px}
+.pe p{font-size:clamp(16px,2.1vw,19px); color:var(--pe-text); margin:0 0 18px}
+.pe strong{color:#fff; font-weight:800}
+.pe em{font-style:italic}
+
+/* reveal-on-scroll */
+.pe .reveal{opacity:0; transform:translateY(28px); transition:opacity .8s ease, transform .8s ease}
+.pe .reveal.in{opacity:1; transform:none}
+
+/* ---------- Section 1 · Hook ---------- */
+.pe-hook{min-height:88vh; display:flex; flex-direction:column; justify-content:center; padding-top:120px}
+.pe-hook-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center}
+.pe-num-sm{font-family:"JetBrains Mono",monospace; font-size:clamp(40px,7vw,72px); color:var(--pe-muted); font-weight:500; line-height:1}
+.pe-hook-4 p{color:var(--pe-muted); max-width:24ch; margin-top:18px}
+.pe-hook-hundreds{text-align:right}
+.pe-num-lg{font-family:"JetBrains Mono",monospace; font-size:clamp(56px,12vw,128px); color:var(--pe-red); font-weight:700; line-height:.95; letter-spacing:-.03em;
+  opacity:0; transform:translateX(60px); transition:opacity 1s ease .5s, transform 1s ease .5s}
+.pe-hook.in .pe-num-lg{opacity:1; transform:none}
+.pe-hook-hundreds p{margin-top:18px; margin-left:auto; max-width:18ch}
+.pe-rule{width:120px; height:1px; background:var(--pe-line); margin:56px auto}
+.pe-hook-foot{text-align:center; font-size:clamp(18px,3vw,26px)!important; color:#fff!important; font-weight:600}
+.pe-down{text-align:center; color:var(--pe-muted); font-size:28px; margin-top:24px; animation:pe-bob 2s ease-in-out infinite}
+@keyframes pe-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@media(max-width:640px){
+  .pe-hook-grid{grid-template-columns:1fr; gap:48px}
+  .pe-hook-hundreds{text-align:left} .pe-hook-hundreds p{margin-left:0}
+}
+
+/* ---------- Section 2 · Compare / tag cloud ---------- */
+.pe-lead{color:#cfcfcf}
+.pe-compare{display:grid; grid-template-columns:200px 1px 1fr; gap:32px; margin:48px 0; align-items:start}
+.pe-compare-div{background:var(--pe-line); width:1px; align-self:stretch}
+.pe-col-head{font-family:"JetBrains Mono",monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--pe-muted); margin-bottom:20px}
+.pe-market-list{list-style:none; margin:0; padding:0}
+.pe-market-list li{font-size:22px; font-weight:600; color:#fff; padding:10px 0; border-bottom:1px solid var(--pe-line)}
+.pe-cloud{display:flex; flex-wrap:wrap; gap:8px}
+.pe-tag{font-family:"JetBrains Mono",monospace; font-size:12.5px; padding:6px 10px; border-radius:6px;
+  background:#161616; border:1px solid #232323; color:#b9b9b9; cursor:default;
+  transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease}
+.pe-tag:hover, .pe-tag:focus-visible{background:rgba(230,57,70,.14); border-color:var(--pe-red); color:#fff; transform:translateY(-1px); outline:none}
+.pe-cloud-hint{font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--pe-muted); margin-top:16px!important}
+@media(max-width:760px){
+  .pe-compare{grid-template-columns:1fr; gap:36px}
+  .pe-compare-div{display:none}
+}
+
+/* tooltip */
+.pe-tooltip{position:fixed; z-index:9999; max-width:300px; padding:12px 14px; border-radius:10px;
+  background:#1b1b1b; border:1px solid #333; color:#eee; font-family:"Inter",sans-serif; font-size:14px; line-height:1.45;
+  box-shadow:0 14px 40px rgba(0,0,0,.6); pointer-events:none; opacity:0; transform:translateY(6px);
+  transition:opacity .12s ease, transform .12s ease}
+.pe-tooltip.show{opacity:1; transform:none}
+.pe-tooltip .pe-tt-src{display:block; margin-top:8px; font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--pe-muted)}
+
+/* pull quote */
+.pe-pull{border:none; margin:56px 0 0; padding:0; font-size:clamp(20px,3vw,28px)!important; line-height:1.4; color:#fff; font-weight:500}
+.pe-pull-em{color:var(--pe-red); font-weight:700}
+
+/* ---------- Section 3 · Reframe ---------- */
+.pe-questions{margin:32px 0!important}
+.pe-q-old{color:var(--pe-muted)} .pe-q-new{color:var(--pe-red)}
+.pe-anchor{text-align:center; font-size:clamp(22px,3.2vw,30px)!important; font-weight:600; color:#fff; margin:48px auto 0!important; max-width:24ch; line-height:1.35}
+
+/* ---------- Section 4 · Calculator ---------- */
+.pe-foot-note{font-family:"JetBrains Mono",monospace; font-size:12px!important; color:var(--pe-muted); border-left:2px solid var(--pe-line); padding-left:14px; margin-top:8px!important}
+.pe-calc{margin:48px 0; padding:32px; background:#101010; border:1px solid var(--pe-line); border-radius:16px}
+.pe-switches{display:grid; gap:22px; margin-bottom:36px}
+.pe-switch{display:grid; grid-template-columns:140px 1fr; gap:18px; align-items:center}
+.pe-switch-label{font-weight:600; color:#fff; font-size:15px; display:flex; align-items:center; gap:7px}
+.pe-info{display:inline-flex; width:16px; height:16px; border-radius:50%; border:1px solid #444; color:var(--pe-muted);
+  font-size:10px; align-items:center; justify-content:center; cursor:help; font-family:"JetBrains Mono",monospace}
+.pe-opts{display:flex; flex-wrap:wrap; gap:8px}
+.pe-opt{font-size:13px; padding:8px 13px; border-radius:8px; background:#181818; border:1px solid #282828; color:#bbb;
+  cursor:pointer; transition:all .15s ease; font-family:"Inter",sans-serif}
+.pe-opt:hover{border-color:#3a3a3a; color:#fff}
+.pe-opt.sel{background:rgba(230,57,70,.16); border-color:var(--pe-red); color:#fff}
+.pe-opt .pe-opt-mult{font-family:"JetBrains Mono",monospace; font-size:11px; color:var(--pe-muted); margin-left:6px}
+.pe-opt.sel .pe-opt-mult{color:var(--pe-red)}
+
+.pe-bars{display:grid; gap:18px}
+.pe-bar-row{display:grid; grid-template-columns:200px 1fr auto; gap:16px; align-items:center}
+.pe-bar-label{font-size:13px; color:#cfcfcf; line-height:1.3}
+.pe-bar-sub{display:block; font-size:11px; color:var(--pe-muted)}
+.pe-bar-track{height:14px; background:#1c1c1c; border-radius:8px; overflow:hidden}
+.pe-bar-fill{height:100%; width:0; border-radius:8px; transition:width .35s cubic-bezier(.4,0,.2,1)}
+.teal-bg{background:var(--pe-teal)} .red-bg{background:var(--pe-red)} .darkred-bg{background:var(--pe-darkred)}
+.pe-bar-amt{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:20px; text-align:right; min-width:84px}
+.pe-bar-amt.big{font-size:30px}
+.pe-bar-you .pe-bar-label{color:#fff; font-weight:600}
+.pe-delta{margin-top:10px; font-size:16px; color:#fff; font-weight:600; text-align:center; padding-top:18px; border-top:1px solid var(--pe-line)}
+.pe-delta .red{font-weight:800}
+.pe-shake{animation:pe-shake .4s ease}
+@keyframes pe-shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+@media(max-width:640px){
+  .pe-switch{grid-template-columns:1fr; gap:8px}
+  .pe-bar-row{grid-template-columns:1fr auto; gap:10px}
+  .pe-bar-track{grid-column:1 / -1; order:3}
+}
+
+.pe-reveal-block{margin-top:64px; padding-top:40px; border-top:1px solid var(--pe-line)}
+.pe-kicker{font-size:clamp(20px,3vw,26px)!important; font-weight:700; color:#fff; margin-top:24px!important}
+
+/* ---------- Sources ---------- */
+.pe-sources{padding-top:48px; padding-bottom:120px}
+.pe-refs{font-family:"JetBrains Mono",monospace; font-size:12.5px; color:var(--pe-muted); line-height:1.7; padding-left:20px}
+.pe-refs li{margin-bottom:12px}
+.pe-refs em{font-style:italic; color:#999}
+
+@media(prefers-reduced-motion:reduce){
+  .pe .reveal,.pe-num-lg{transition:none!important}
+  .pe-down{animation:none}
+}
+</style>
+
+<script>
+(function(){
+  if (window.__peInit) return; window.__peInit = true;
+
+  /* ---------- reveal on scroll ---------- */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.18});
+  document.querySelectorAll('.pe .reveal').forEach(function(el){ io.observe(el); });
+
+  /* ---------- Section 2 · 47-factor tag cloud ---------- */
+  var FACTORS = [
+    ["Device type","iPhone users are quoted higher prices.","Mone et al., 2026"],
+    ["Device model","Newer, pricier hardware signals higher willingness to pay.","FTC 6(b)"],
+    ["Operating system","iOS vs Android shifts your baseline price.","FTC 6(b)"],
+    ["OS version","An up-to-date OS hints at a higher-spending profile.","FTC 6(b)"],
+    ["Browser","Browser choice correlates with spending habits.","FTC 6(b)"],
+    ["Browser version","A stale version can flag a price-sensitive user.","FTC 6(b)"],
+    ["Screen size","Larger, premium screens nudge the price up.","FTC 6(b)"],
+    ["Screen resolution","High-DPI displays signal a premium device.","FTC 6(b)"],
+    ["Language setting","Your locale decides which price tier you land in.","FTC 6(b)"],
+    ["Time-zone setting","Reveals where &mdash; and when &mdash; you really are.","FTC 6(b)"],
+    ["Battery level","Low battery reads as urgency &rarr; price goes up.","Kumar et al., 2026"],
+    ["IP address","Maps you to a region and a price band.","FTC 6(b)"],
+    ["Precise GPS location","Pins you to a neighborhood-level price.","FTC 6(b)"],
+    ["Home ZIP code","Used to infer income and adjust the quote.","FTC 6(b)"],
+    ["Neighborhood income","Wealthier blocks get higher quotes.","FTC 6(b)"],
+    ["Neighborhood crime rate","Feeds risk and urgency models.","Kumar et al., 2026"],
+    ["Nearby service density","Fewer alternatives nearby &rarr; higher price.","Kumar et al., 2026"],
+    ["Country","Sets your national price tier.","FTC 6(b)"],
+    ["City","City-level demand shifts your price.","FTC 6(b)"],
+    ["Distance to a store","Far from a store means less ability to walk away.","FTC 6(b)"],
+    ["Mouse-movement path","Hesitation and hovering reveal intent.","FTC 6(b)"],
+    ["Scroll speed","Fast scrolling vs careful reading signals urgency.","FTC 6(b)"],
+    ["Scroll depth","How far you read flags how committed you are.","FTC 6(b)"],
+    ["Time on page","Longer dwell time reads as higher intent.","FTC 6(b)"],
+    ["Click pattern","Repeated clicks signal you're hooked.","FTC 6(b)"],
+    ["Video watch ratio","Finishing the demo flags strong interest.","FTC 6(b)"],
+    ["Move toward close button","Exit intent can trigger a different price.","FTC 6(b)"],
+    ["Tab switching","Comparison-shopping behavior is detected.","FTC 6(b)"],
+    ["Sites visited (30 days)","Your browsing trail builds a spending profile.","FTC 6(b)"],
+    ["Similar products browsed","Past browsing predicts willingness to pay.","Shiller, 2020"],
+    ["Cart added then abandoned","Abandonment is read as a price-sensitivity signal.","FTC 6(b)"],
+    ["Purchase history","What you bought before predicts what you'll pay now.","Shiller, 2020"],
+    ["Inferred price sensitivity","A model guesses how much a discount sways you.","Shiller, 2020"],
+    ["Searches for this item","Repeated searches read as rising intent.","FTC 6(b)"],
+    ["Cross-device behavior","Your phone and laptop are linked into one profile.","FTC 6(b)"],
+    ["Membership tier","Loyalty status can raise or lower your price.","FTC 6(b)"],
+    ["Account age","How long you've been a customer shifts the quote.","FTC 6(b)"],
+    ["Email address","The hub that ties every other signal together.","FTC 6(b)"],
+    ["Payment method","Card vs wallet hints at spending power.","FTC 6(b)"],
+    ["Card-issuing bank","Your bank can act as a proxy for income.","FTC 6(b)"],
+    ["Gender","Inferred gender feeds the price model.","FTC 6(b)"],
+    ["Inferred household stage","Labels like 'new parent' target your urgency.","FTC 6(b)"],
+    ["Current time","Time of day shifts demand and price.","FTC 6(b)"],
+    ["Day of week","Weekday vs weekend changes the quote.","FTC 6(b)"],
+    ["Local weather","Weather nudges demand-based pricing.","FTC 6(b)"],
+    ["Local events","A nearby concert or game spikes prices.","FTC 6(b)"],
+    ["Nearby search volume","Rising demand around you raises your price.","FTC 6(b)"]
+  ];
+  var cloud = document.getElementById('pe-cloud');
+  var tip = document.getElementById('pe-tooltip');
+  function showTip(html, x, y){
+    tip.innerHTML = html;
+    tip.setAttribute('aria-hidden','false');
+    tip.classList.add('show');
+    var r = tip.getBoundingClientRect();
+    var left = Math.min(Math.max(8, x - r.width/2), window.innerWidth - r.width - 8);
+    var top = y - r.height - 14;
+    if (top < 8) top = y + 20;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+  function hideTip(){ tip.classList.remove('show'); tip.setAttribute('aria-hidden','true'); }
+  FACTORS.forEach(function(f){
+    var t = document.createElement('span');
+    t.className = 'pe-tag'; t.textContent = f[0];
+    t.setAttribute('role','listitem'); t.tabIndex = 0;
+    var html = f[1] + '<span class="pe-tt-src">Source: ' + f[2] + '</span>';
+    function place(ev){
+      var rect = t.getBoundingClientRect();
+      var px = ev.clientX || (rect.left + rect.width/2);
+      showTip(html, px, rect.top);
+    }
+    t.addEventListener('mouseenter', place);
+    t.addEventListener('mousemove', place);
+    t.addEventListener('mouseleave', hideTip);
+    t.addEventListener('focus', function(){
+      var rect = t.getBoundingClientRect();
+      showTip(html, rect.left + rect.width/2, rect.top);
+    });
+    t.addEventListener('blur', hideTip);
+    cloud.appendChild(t);
+  });
+
+  /* ---------- Section 4 · price calculator ---------- */
+  var BASELINE = 12.00, WORST = 34.80;
+  var SWITCHES = [
+    {key:'phone', label:'Phone', info:'iPhone users have been quoted ~4% more in documented cases (Mone et al., 2026).',
+     opts:[['iPhone (new)',.08],['iPhone (older)',.04],['Android (flagship)',.03],['Android (basic)',0]], def:0},
+    {key:'area', label:'Neighborhood', info:'ZIP code and block-level income are used to infer how much you can pay (FTC 6(b)).',
+     opts:[['High-income',.10],['Middle-income',.03],['Low-income',0]], def:1},
+    {key:'time', label:'Time of day', info:'Late-night demand has been linked to higher quotes (Kumar et al., 2026).',
+     opts:[['Work hours',0],['Evening',.03],['Late night',.06],['Weekend',.02]], def:1},
+    {key:'search', label:'Searches', info:'More searches signal stronger intent, which models price higher (Shiller, 2020).',
+     opts:[['1st time',0],['2-4 times',.05],['5+ times',.09]], def:1},
+    {key:'battery', label:'Battery', info:'Low battery reads as urgency &mdash; you can’t shop around forever (Kumar et al., 2026).',
+     opts:[['Above 50%',0],['20-50%',.06],['Below 20%',0.12]], def:1}
+  ];
+  var state = {};
+  var switchesEl = document.getElementById('pe-switches');
+  SWITCHES.forEach(function(sw){
+    state[sw.key] = sw.opts[sw.def][1];
+    var row = document.createElement('div'); row.className = 'pe-switch';
+    var lab = document.createElement('div'); lab.className = 'pe-switch-label';
+    lab.innerHTML = sw.label + ' <span class="pe-info" tabindex="0" role="img" aria-label="info">i</span>';
+    var infoBtn = lab.querySelector('.pe-info');
+    infoBtn.addEventListener('mouseenter', function(){ var r=infoBtn.getBoundingClientRect(); showTip(sw.info, r.left+r.width/2, r.top); });
+    infoBtn.addEventListener('mouseleave', hideTip);
+    infoBtn.addEventListener('focus', function(){ var r=infoBtn.getBoundingClientRect(); showTip(sw.info, r.left+r.width/2, r.top); });
+    infoBtn.addEventListener('blur', hideTip);
+    var opts = document.createElement('div'); opts.className = 'pe-opts';
+    sw.opts.forEach(function(o, i){
+      var b = document.createElement('button'); b.type='button'; b.className='pe-opt' + (i===sw.def?' sel':'');
+      b.innerHTML = o[0] + '<span class="pe-opt-mult">' + (o[1]>0?'+'+Math.round(o[1]*100)+'%':'0%') + '</span>';
+      b.addEventListener('click', function(){
+        opts.querySelectorAll('.pe-opt').forEach(function(x){x.classList.remove('sel');});
+        b.classList.add('sel'); state[sw.key] = o[1]; render();
+      });
+      opts.appendChild(b);
+    });
+    row.appendChild(lab); row.appendChild(opts); switchesEl.appendChild(row);
+  });
+
+  var barBase = document.getElementById('pe-bar-base'), barYou = document.getElementById('pe-bar-you'), barWorst = document.getElementById('pe-bar-worst');
+  var amtBase = document.getElementById('pe-amt-base'), amtYou = document.getElementById('pe-amt-you'), amtWorst = document.getElementById('pe-amt-worst');
+  var deltaEl = document.getElementById('pe-delta');
+  var prevPct = 0, tween;
+  function tweenNum(el, from, to){
+    cancelAnimationFrame(tween); var start=null, dur=320;
+    function step(ts){ if(!start) start=ts; var p=Math.min((ts-start)/dur,1);
+      var v = from + (to-from)*(p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2);
+      el.textContent = '$' + v.toFixed(2); if(p<1) tween=requestAnimationFrame(step); }
+    tween = requestAnimationFrame(step);
+  }
+  function render(){
+    var sum = 0; for (var k in state) sum += state[k];
+    var you = BASELINE * (1 + sum);
+    var max = WORST;
+    barBase.style.width = (BASELINE/max*100) + '%';
+    barYou.style.width  = (you/max*100) + '%';
+    barWorst.style.width = '100%';
+    var prevYou = parseFloat(amtYou.textContent.replace('$','')) || BASELINE;
+    tweenNum(amtYou, prevYou, you);
+    amtBase.textContent = '$' + BASELINE.toFixed(2);
+    amtWorst.textContent = '$' + WORST.toFixed(2);
+    var diff = you - BASELINE, pct = Math.round(diff/BASELINE*100);
+    deltaEl.innerHTML = diff <= 0.005
+      ? 'You’re at the baseline price &mdash; for now.'
+      : 'You’d pay <span class="red">$' + diff.toFixed(2) + '</span> more than baseline &mdash; that’s <span class="red">' + pct + '% more</span>.';
+    if (pct > 50 && prevPct <= 50){ amtYou.classList.remove('pe-shake'); void amtYou.offsetWidth; amtYou.classList.add('pe-shake'); }
+    prevPct = pct;
+  }
+  render();
+})();
+</script>]]></content><author><name>Shanghao Wu</name></author><summary type="html"><![CDATA[How algorithms quietly redefine the relationship between you and the market.]]></summary></entry><entry><title type="html">Hello, world.</title><link href="http://localhost:4001/my-site/blog/hello-world/" rel="alternate" type="text/html" title="Hello, world." /><published>2026-05-14T00:00:00-04:00</published><updated>2026-05-14T00:00:00-04:00</updated><id>http://localhost:4001/my-site/blog/hello-world</id><content type="html" xml:base="http://localhost:4001/my-site/blog/hello-world/"><![CDATA[<p>Starting a blog feels like buying a new notebook — half the value is the blank page in front of you, and half is the quiet promise that you’ll show up to fill it.</p>
+
+<p>I plan to write here about three kinds of things:</p>
+
+<ul>
+  <li><strong>Math I’m learning</strong> — short notes, worked examples, intuition I wish someone had told me earlier.</li>
+  <li><strong>Data projects</strong> — what I tried, what broke, and the chart that finally made sense.</li>
+  <li><strong>Side observations</strong> — things from soccer, books, faith, anything that quietly shapes how I think.</li>
+</ul>
+
+<p>Posts will be short more often than long. If you want to follow along, there’s an <a href="/my-site/feed.xml">RSS feed</a> — or just check back when you’re curious.</p>
+
+<p>Thanks for being here.</p>]]></content><author><name>Shanghao Wu</name></author><summary type="html"><![CDATA[Starting a blog feels like buying a new notebook — half the value is the blank page in front of you, and half is the quiet promise that you’ll show up to fill it.]]></summary></entry></feed>
