@@ -277,8 +277,9 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
         <p class="pe-fig-note">Shiller, 2020. Personalized pricing lifts company profit about 52 times more than traditional demographic pricing.</p>
       </figure>
       <div class="pe-fig-read">
-        <p>Under traditional pricing, consumers keep some surplus. If you would pay $20 but only pay $12, that $8 is your surplus. The goal of personalized pricing is to take that $8.</p>
-        <p>Shiller's 2020 research shows that personalized pricing based on browsing history can raise company profit by 13%, while traditional pricing based on demographics raises it by only 0.25%. That extra 13% does not appear from nowhere. It comes directly from the surplus that used to belong to consumers.</p>
+        <p>Consumer surplus refers to the value retained by a consumer when the price actually paid is lower than their maximum willingness to pay. If you are willing to pay $20 but actually pay only $12, the $8 difference represents your consumer surplus.</p>
+        <p>Algorithmic pricing alters this balance. By leveraging browsing history, geographic location, device type, and other behavioral characteristics, companies can estimate the price a specific consumer is willing to pay. The closer the price comes to this psychological upper limit, the less surplus value the consumer retains.</p>
+        <p>A 2020 study by Shiller found that personalized pricing based on browsing history could boost corporate profits by approximately 13%, whereas traditional pricing based on demographic characteristics yielded an increase of only 0.25%. This additional profit does not materialize out of thin air. Rather, it stems from a transfer of value from consumers to companies.</p>
       </div>
     </div>
 
