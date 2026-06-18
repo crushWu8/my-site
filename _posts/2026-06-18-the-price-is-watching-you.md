@@ -44,13 +44,11 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
           <span class="pe-tag pe-tag-market" role="listitem">Fuel cost</span>
           <span class="pe-tag pe-tag-market" role="listitem">Competitors</span>
         </div>
-        <p class="pe-cloud-hint">Four factors, all about the market.</p>
       </div>
       <div class="pe-compare-div" aria-hidden="true"></div>
       <div class="pe-compare-col pe-you-col">
         <div class="pe-col-head">2026 &middot; <span class="red">You</span></div>
         <div class="pe-cloud" id="pe-cloud" role="list" aria-label="47 documented pricing factors"></div>
-        <p class="pe-cloud-hint">Scroll the list. Hover or tap any factor.</p>
       </div>
     </div>
   </section>
@@ -185,7 +183,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   transition:background .15s ease, color .15s ease, border-color .15s ease, transform .15s ease}
 .pe-tag:hover, .pe-tag:focus-visible{background:rgba(230,57,70,.14); border-color:var(--pe-red); color:var(--pe-strong); transform:translateY(-1px); outline:none}
 .pe-tag-market:hover{background:rgba(6,182,160,.14); border-color:var(--pe-teal); color:var(--pe-strong)}
-.pe-cloud-hint{font-family:"JetBrains Mono",monospace; font-size:12px; color:var(--pe-muted); margin-top:16px!important}
 @media(max-width:760px){
   .pe-compare{grid-template-columns:1fr; gap:36px}
   .pe-compare-div{display:none}
@@ -198,7 +195,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   transition:opacity .12s ease, transform .12s ease}
 :root[data-theme="light"] .pe-tooltip{background:#ffffff; border-color:#e2e5e9; color:#1f2937; box-shadow:0 14px 40px rgba(0,0,0,.18)}
 .pe-tooltip.show{opacity:1; transform:none}
-.pe-tooltip .pe-tt-src{display:block; margin-top:8px; font-family:"JetBrains Mono",monospace; font-size:11px; color:#8a8a8a}
 
 /* pull quote */
 
@@ -264,54 +260,55 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   document.querySelectorAll('.pe .reveal').forEach(function(el){ io.observe(el); });
 
   /* ---------- Section 2 · 47-factor tag cloud ---------- */
+  // Factor descriptions and sources are kept here as comments for later use (not shown on hover for now).
   var FACTORS = [
-    ["Device type","iPhone users are quoted higher prices.","Mone et al., 2026"],
-    ["Device model","Newer, pricier hardware signals higher willingness to pay.","FTC 6(b)"],
-    ["Operating system","iOS vs Android shifts your baseline price.","FTC 6(b)"],
-    ["OS version","An up-to-date OS hints at a higher-spending profile.","FTC 6(b)"],
-    ["Browser","Browser choice correlates with spending habits.","FTC 6(b)"],
-    ["Browser version","A stale version can flag a price-sensitive user.","FTC 6(b)"],
-    ["Screen size","Larger, premium screens nudge the price up.","FTC 6(b)"],
-    ["Screen resolution","High-DPI displays signal a premium device.","FTC 6(b)"],
-    ["Language setting","Your locale decides which price tier you land in.","FTC 6(b)"],
-    ["Time-zone setting","Reveals where and when you really are.","FTC 6(b)"],
-    ["Battery level","Low battery reads as urgency, so the price goes up.","Kumar et al., 2026"],
-    ["IP address","Maps you to a region and a price band.","FTC 6(b)"],
-    ["Precise GPS location","Pins you to a neighborhood-level price.","FTC 6(b)"],
-    ["Home ZIP code","Used to infer income and adjust the quote.","FTC 6(b)"],
-    ["Neighborhood income","Wealthier blocks get higher quotes.","FTC 6(b)"],
-    ["Neighborhood crime rate","Feeds risk and urgency models.","Kumar et al., 2026"],
-    ["Nearby service density","Fewer alternatives nearby means a higher price.","Kumar et al., 2026"],
-    ["Country","Sets your national price tier.","FTC 6(b)"],
-    ["City","City-level demand shifts your price.","FTC 6(b)"],
-    ["Distance to a store","Far from a store means less ability to walk away.","FTC 6(b)"],
-    ["Mouse-movement path","Hesitation and hovering reveal intent.","FTC 6(b)"],
-    ["Scroll speed","Fast scrolling vs careful reading signals urgency.","FTC 6(b)"],
-    ["Scroll depth","How far you read flags how committed you are.","FTC 6(b)"],
-    ["Time on page","Longer dwell time reads as higher intent.","FTC 6(b)"],
-    ["Click pattern","Repeated clicks signal you're hooked.","FTC 6(b)"],
-    ["Video watch ratio","Finishing the demo flags strong interest.","FTC 6(b)"],
-    ["Move toward close button","Exit intent can trigger a different price.","FTC 6(b)"],
-    ["Tab switching","Comparison-shopping behavior is detected.","FTC 6(b)"],
-    ["Sites visited (30 days)","Your browsing trail builds a spending profile.","FTC 6(b)"],
-    ["Similar products browsed","Past browsing predicts willingness to pay.","Shiller, 2020"],
-    ["Cart added then abandoned","Abandonment is read as a price-sensitivity signal.","FTC 6(b)"],
-    ["Purchase history","What you bought before predicts what you'll pay now.","Shiller, 2020"],
-    ["Inferred price sensitivity","A model guesses how much a discount sways you.","Shiller, 2020"],
-    ["Searches for this item","Repeated searches read as rising intent.","FTC 6(b)"],
-    ["Cross-device behavior","Your phone and laptop are linked into one profile.","FTC 6(b)"],
-    ["Membership tier","Loyalty status can raise or lower your price.","FTC 6(b)"],
-    ["Account age","How long you've been a customer shifts the quote.","FTC 6(b)"],
-    ["Email address","The hub that ties every other signal together.","FTC 6(b)"],
-    ["Payment method","Card vs wallet hints at spending power.","FTC 6(b)"],
-    ["Card-issuing bank","Your bank can act as a proxy for income.","FTC 6(b)"],
-    ["Gender","Inferred gender feeds the price model.","FTC 6(b)"],
-    ["Inferred household stage","Labels like 'new parent' target your urgency.","FTC 6(b)"],
-    ["Current time","Time of day shifts demand and price.","FTC 6(b)"],
-    ["Day of week","Weekday vs weekend changes the quote.","FTC 6(b)"],
-    ["Local weather","Weather nudges demand-based pricing.","FTC 6(b)"],
-    ["Local events","A nearby concert or game spikes prices.","FTC 6(b)"],
-    ["Nearby search volume","Rising demand around you raises your price.","FTC 6(b)"]
+    "Device type",               // iPhone users are quoted higher prices. (Mone et al., 2026)
+    "Device model",              // Newer, pricier hardware signals higher willingness to pay. (FTC 6(b))
+    "Operating system",          // iOS vs Android shifts your baseline price. (FTC 6(b))
+    "OS version",                // An up-to-date OS hints at a higher-spending profile. (FTC 6(b))
+    "Browser",                   // Browser choice correlates with spending habits. (FTC 6(b))
+    "Browser version",           // A stale version can flag a price-sensitive user. (FTC 6(b))
+    "Screen size",               // Larger, premium screens nudge the price up. (FTC 6(b))
+    "Screen resolution",         // High-DPI displays signal a premium device. (FTC 6(b))
+    "Language setting",          // Your locale decides which price tier you land in. (FTC 6(b))
+    "Time-zone setting",         // Reveals where and when you really are. (FTC 6(b))
+    "Battery level",             // Low battery reads as urgency, so the price goes up. (Kumar et al., 2026)
+    "IP address",                // Maps you to a region and a price band. (FTC 6(b))
+    "Precise GPS location",      // Pins you to a neighborhood-level price. (FTC 6(b))
+    "Home ZIP code",             // Used to infer income and adjust the quote. (FTC 6(b))
+    "Neighborhood income",       // Wealthier blocks get higher quotes. (FTC 6(b))
+    "Neighborhood crime rate",   // Feeds risk and urgency models. (Kumar et al., 2026)
+    "Nearby service density",    // Fewer alternatives nearby means a higher price. (Kumar et al., 2026)
+    "Country",                   // Sets your national price tier. (FTC 6(b))
+    "City",                      // City-level demand shifts your price. (FTC 6(b))
+    "Distance to a store",       // Far from a store means less ability to walk away. (FTC 6(b))
+    "Mouse-movement path",       // Hesitation and hovering reveal intent. (FTC 6(b))
+    "Scroll speed",              // Fast scrolling vs careful reading signals urgency. (FTC 6(b))
+    "Scroll depth",              // How far you read flags how committed you are. (FTC 6(b))
+    "Time on page",              // Longer dwell time reads as higher intent. (FTC 6(b))
+    "Click pattern",             // Repeated clicks signal you're hooked. (FTC 6(b))
+    "Video watch ratio",         // Finishing the demo flags strong interest. (FTC 6(b))
+    "Move toward close button",  // Exit intent can trigger a different price. (FTC 6(b))
+    "Tab switching",             // Comparison-shopping behavior is detected. (FTC 6(b))
+    "Sites visited (30 days)",   // Your browsing trail builds a spending profile. (FTC 6(b))
+    "Similar products browsed",  // Past browsing predicts willingness to pay. (Shiller, 2020)
+    "Cart added then abandoned", // Abandonment is read as a price-sensitivity signal. (FTC 6(b))
+    "Purchase history",          // What you bought before predicts what you'll pay now. (Shiller, 2020)
+    "Inferred price sensitivity",// A model guesses how much a discount sways you. (Shiller, 2020)
+    "Searches for this item",    // Repeated searches read as rising intent. (FTC 6(b))
+    "Cross-device behavior",     // Your phone and laptop are linked into one profile. (FTC 6(b))
+    "Membership tier",           // Loyalty status can raise or lower your price. (FTC 6(b))
+    "Account age",               // How long you've been a customer shifts the quote. (FTC 6(b))
+    "Email address",             // The hub that ties every other signal together. (FTC 6(b))
+    "Payment method",            // Card vs wallet hints at spending power. (FTC 6(b))
+    "Card-issuing bank",         // Your bank can act as a proxy for income. (FTC 6(b))
+    "Gender",                    // Inferred gender feeds the price model. (FTC 6(b))
+    "Inferred household stage",  // Labels like 'new parent' target your urgency. (FTC 6(b))
+    "Current time",              // Time of day shifts demand and price. (FTC 6(b))
+    "Day of week",               // Weekday vs weekend changes the quote. (FTC 6(b))
+    "Local weather",             // Weather nudges demand-based pricing. (FTC 6(b))
+    "Local events",              // A nearby concert or game spikes prices. (FTC 6(b))
+    "Nearby search volume"       // Rising demand around you raises your price. (FTC 6(b))
   ];
   var cloud = document.getElementById('pe-cloud');
   var tip = document.getElementById('pe-tooltip');
@@ -327,24 +324,11 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
     tip.style.top = top + 'px';
   }
   function hideTip(){ tip.classList.remove('show'); tip.setAttribute('aria-hidden','true'); }
-  FACTORS.forEach(function(f){
+  // Render labels only. No hover tooltip, so the You factors behave like the Market factors.
+  FACTORS.forEach(function(label){
     var t = document.createElement('span');
-    t.className = 'pe-tag'; t.textContent = f[0];
-    t.setAttribute('role','listitem'); t.tabIndex = 0;
-    var html = f[1] + '<span class="pe-tt-src">' + f[2] + '</span>';
-    function place(ev){
-      var rect = t.getBoundingClientRect();
-      var px = ev.clientX || (rect.left + rect.width/2);
-      showTip(html, px, rect.top);
-    }
-    t.addEventListener('mouseenter', place);
-    t.addEventListener('mousemove', place);
-    t.addEventListener('mouseleave', hideTip);
-    t.addEventListener('focus', function(){
-      var rect = t.getBoundingClientRect();
-      showTip(html, rect.left + rect.width/2, rect.top);
-    });
-    t.addEventListener('blur', hideTip);
+    t.className = 'pe-tag'; t.textContent = label;
+    t.setAttribute('role','listitem');
     cloud.appendChild(t);
   });
 
