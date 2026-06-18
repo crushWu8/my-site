@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="About Shanghao Wu — mathematics student working with Python and MySQL on statistical analysis, modeling, and visualization.">
   <title>About · Shanghao Wu</title>
@@ -15,6 +16,7 @@
     <a href="/my-site/coursework.html">Coursework</a>
     <a href="/my-site/blog/">Blog</a>
     <a href="/my-site/contact.html">Contact</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle light/dark theme"><span class="theme-icon" aria-hidden="true"></span></button>
   </nav>
 
   <main class="wrap">
@@ -51,6 +53,21 @@
 </main>
 
 
+  <script>
+  (function(){
+    var btn = document.getElementById('theme-toggle');
+    if(!btn) return;
+    function current(){ return document.documentElement.getAttribute('data-theme') || 'dark'; }
+    function apply(t){
+      document.documentElement.setAttribute('data-theme', t);
+      try{ localStorage.setItem('theme', t); }catch(e){}
+      btn.setAttribute('aria-pressed', String(t === 'light'));
+      window.dispatchEvent(new CustomEvent('themechange', {detail:t}));
+    }
+    apply(current());
+    btn.addEventListener('click', function(){ apply(current() === 'light' ? 'dark' : 'light'); });
+  })();
+  </script>
   <script>fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});</script>
 </body>
 </html>

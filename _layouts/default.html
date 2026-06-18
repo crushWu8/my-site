@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ page.description | default: site.description }}">
   <title>{% if page.title and page.title != site.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -15,10 +16,26 @@
     <a href="{{ '/coursework.html' | relative_url }}"{% if page.nav == 'coursework' %} aria-current="page"{% endif %}>Coursework</a>
     <a href="{{ '/blog/' | relative_url }}"{% if page.nav == 'blog' %} aria-current="page"{% endif %}>Blog</a>
     <a href="{{ '/contact.html' | relative_url }}"{% if page.nav == 'contact' %} aria-current="page"{% endif %}>Contact</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle light/dark theme"><span class="theme-icon" aria-hidden="true"></span></button>
   </nav>
 
   {{ content }}
 
+  <script>
+  (function(){
+    var btn = document.getElementById('theme-toggle');
+    if(!btn) return;
+    function current(){ return document.documentElement.getAttribute('data-theme') || 'dark'; }
+    function apply(t){
+      document.documentElement.setAttribute('data-theme', t);
+      try{ localStorage.setItem('theme', t); }catch(e){}
+      btn.setAttribute('aria-pressed', String(t === 'light'));
+      window.dispatchEvent(new CustomEvent('themechange', {detail:t}));
+    }
+    apply(current());
+    btn.addEventListener('click', function(){ apply(current() === 'light' ? 'dark' : 'light'); });
+  })();
+  </script>
   <script>fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});</script>
 </body>
 </html>

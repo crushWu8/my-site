@@ -20,7 +20,16 @@ permalink: /
       particles = [],
       N = 120,
       linkDist = 180,
-      mouseDist = 200;
+      mouseDist = 200,
+      dot = '180,200,230', line = '100,160,255';
+
+  function readColors(){
+    var s = getComputedStyle(document.documentElement);
+    dot = (s.getPropertyValue('--particle') || '180,200,230').trim();
+    line = (s.getPropertyValue('--particle-line') || '100,160,255').trim();
+  }
+  readColors();
+  window.addEventListener('themechange', readColors);
 
   function resize(){
     w = c.width = window.innerWidth;
@@ -73,7 +82,7 @@ permalink: /
 
       ctx.beginPath();
       ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle='rgba(180,200,230,0.7)';
+      ctx.fillStyle='rgba('+dot+',0.7)';
       ctx.fill();
 
       for(var j=i+1;j<N;j++){
@@ -85,7 +94,7 @@ permalink: /
           ctx.beginPath();
           ctx.moveTo(p.x,p.y);
           ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle='rgba(100,160,255,'+alpha+')';
+          ctx.strokeStyle='rgba('+line+','+alpha+')';
           ctx.lineWidth=1.2;
           ctx.stroke();
         }
