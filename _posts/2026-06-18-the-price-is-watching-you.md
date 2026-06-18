@@ -101,14 +101,13 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   <section class="pe-sec pe-cost reveal" aria-labelledby="pe-cost-h">
     <h2 id="pe-cost-h">When Your Data Becomes the Price</h2>
     <p>Algorithmic pricing does not take a little more from everyone evenly. It finds the people who cannot walk away, cannot see clearly, and cannot compare, and it charges them more. The four figures below are what that targeted harm looks like.</p>
-    <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations. Figure 4 is a concept visualization based on the research literature, and it is labeled as such.</p>
+    <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations. Figure 4 is a concept visualization based on the research literature, not a plot of measured values.</p>
 
     <!-- Figure 1 · Battery quote -->
     <div class="pe-fig reveal">
       <figure class="pe-figure">
         <div class="pe-fig-head">
           <span class="pe-fig-title">Figure 1 &middot; Lower battery, higher urgency</span>
-          <span class="pe-badge pe-badge-real">REAL QUOTE</span>
         </div>
         <div class="pe-bars2-cap">Likelihood a user accepts surge pricing</div>
         <div class="pe-bc-sub">Qualitative, based on Uber's internal finding</div>
@@ -162,7 +161,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
       <figure class="pe-figure">
         <div class="pe-fig-head">
           <span class="pe-fig-title">Figure 2 &middot; Item price by device type</span>
-          <span class="pe-badge pe-badge-real">REAL DATA</span>
         </div>
         <div class="pe-bars2-cap">Average price per item</div>
         <div class="pe-bars2">
@@ -192,7 +190,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
       <figure class="pe-figure">
         <div class="pe-fig-head">
           <span class="pe-fig-title">Figure 3 &middot; Cumulative rent increase before and after the algorithm</span>
-          <span class="pe-badge pe-badge-real">REAL DATA</span>
         </div>
         <div class="pe-line-cap">Cumulative rent increase</div>
         <svg class="pe-linechart" viewBox="0 0 600 320" role="img" aria-label="Line chart comparing cumulative rent increase in markets using RealPage versus other markets">
@@ -259,7 +256,6 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
       <figure class="pe-figure">
         <div class="pe-fig-head">
           <span class="pe-fig-title">Figure 4 &middot; How consumer surplus gets transferred</span>
-          <span class="pe-badge pe-badge-concept">CONCEPT</span>
         </div>
         <div class="pe-line-cap">Where the value goes</div>
         <div class="pe-stack">
@@ -444,12 +440,8 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 /* figure card: a fixed cream "paper" surface in both themes */
 .pe-figure{background:#F8F6F1; color:#2a2a2a; border:1px solid #e6e1d6; border-radius:14px; padding:28px; margin:0 0 22px}
 .pe-figure *{color:inherit}
-.pe-fig-head{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px}
+.pe-fig-head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px}
 .pe-fig-title{font-family:"Inter",sans-serif; font-weight:800; font-size:clamp(16px,2.4vw,20px); color:#1a1a1a}
-.pe-badge{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.08em; padding:4px 10px; border-radius:999px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap}
-.pe-badge::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor; display:inline-block}
-.pe-badge-real{color:#067a6c; background:rgba(6,182,160,.16)}
-.pe-badge-concept{color:#8a6a00; background:rgba(244,211,94,.28)}
 .pe-fig-read{margin:0 0 4px}
 .pe-fig-read p{font-size:15px!important; color:var(--pe-text); margin:0 0 12px}
 .pe-fig-note{font-family:"JetBrains Mono",monospace; font-size:11px!important; color:#7a756a!important; margin:18px 0 0!important; line-height:1.5}
