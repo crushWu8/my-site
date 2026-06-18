@@ -97,15 +97,192 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
     </div>
   </section>
 
+  <!-- ============ SECTION 5 · THE COST ============ -->
+  <section class="pe-sec pe-cost reveal" aria-labelledby="pe-cost-h">
+    <h2 id="pe-cost-h">When the price becomes a portrait, who pays the most?</h2>
+    <p>Algorithmic pricing does not take a little more from everyone evenly. It finds the people who cannot walk away, cannot see clearly, and cannot compare, and it charges them more. The four figures below are what that targeted harm looks like.</p>
+    <p class="pe-foot-note">Data comes from the cited research, government filings, and news investigations. Figure 4 is a concept visualization based on the research literature, and it is labeled as such.</p>
+
+    <!-- Figure 1 · Battery quote -->
+    <div class="pe-fig reveal">
+      <figure class="pe-figure">
+        <div class="pe-fig-head">
+          <span class="pe-fig-title">Figure 1 &middot; Lower battery, higher urgency</span>
+          <span class="pe-badge pe-badge-real">REAL QUOTE</span>
+        </div>
+        <div class="pe-batt-row">
+          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:100%;background:#3bb273"></span></span><span class="pe-batt-pct">100%</span></div>
+          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:60%;background:#e3c000"></span></span><span class="pe-batt-pct">60%</span></div>
+          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:30%;background:#e08a2b"></span></span><span class="pe-batt-pct">30%</span></div>
+          <div class="pe-batt"><span class="pe-batt-icon"><span class="pe-batt-fill" style="width:8%;background:#E63946"></span></span><span class="pe-batt-pct">5%</span></div>
+        </div>
+        <blockquote class="pe-quote">
+          "Battery is one of the strongest predictors of how sensitive a user is to surge pricing."
+          <cite>Keith Chen, former head of economic research at Uber. NPR Hidden Brain, May 2016.</cite>
+        </blockquote>
+        <ul class="pe-facts">
+          <li>Below 5%, the iPhone battery icon turns red.</li>
+          <li>Users stop waiting for the surge to drop.</li>
+          <li>They accept the higher price.</li>
+        </ul>
+        <p class="pe-fig-kicker">Uber denies using this signal to set prices. Uber admits it has been monitoring it.</p>
+      </figure>
+      <div class="pe-fig-read">
+        <p>In 2016, Uber's then head of economic research, Keith Chen, admitted an internal finding in an NPR interview. Battery level is one of the strongest predictors of how sensitive a user is to surge pricing.</p>
+        <p>When a phone drops below 5% and the iPhone icon turns red, people stop waiting for the surge to fall and accept the higher price. Chen insisted Uber does not price on this signal. The one fact he did not deny is that Uber has been monitoring it.</p>
+      </div>
+    </div>
+
+    <hr class="pe-sep">
+
+    <!-- Figure 2 · Bar chart -->
+    <div class="pe-fig reveal">
+      <figure class="pe-figure">
+        <div class="pe-fig-head">
+          <span class="pe-fig-title">Figure 2 &middot; Item price by device type</span>
+          <span class="pe-badge pe-badge-real">REAL DATA</span>
+        </div>
+        <div class="pe-bars2-cap">Average price per item</div>
+        <div class="pe-bars2">
+          <div class="pe-bar2-col">
+            <div class="pe-bar2-val">&#8377;485</div>
+            <div class="pe-bar2-track"><div class="pe-bar2 teal-bg" style="height:20%"></div></div>
+            <div class="pe-bar2-name">Android</div>
+          </div>
+          <div class="pe-bar2-col">
+            <div class="pe-bar2-val">&#8377;501</div>
+            <div class="pe-bar2-track"><div class="pe-bar2 red-bg" style="height:84%"></div></div>
+            <div class="pe-bar2-name">iPhone</div>
+          </div>
+        </div>
+        <p class="pe-fig-note">Plus 16 rupees per item. About 2,400 rupees per household per year. Vertical scale starts at 480 rupees.</p>
+      </figure>
+      <div class="pe-fig-read">
+        <p>Across three major Indian delivery platforms, iPhone users paid about 4% more per item on average than Android users.</p>
+        <p>It looks small. But multiplied across a year of orders, a household pays enough extra, only because it used the wrong phone, to buy 30 kilograms of rice.</p>
+      </div>
+    </div>
+
+    <hr class="pe-sep">
+
+    <!-- Figure 3 · Dual line chart -->
+    <div class="pe-fig reveal">
+      <figure class="pe-figure">
+        <div class="pe-fig-head">
+          <span class="pe-fig-title">Figure 3 &middot; Cumulative rent increase before and after the algorithm</span>
+          <span class="pe-badge pe-badge-real">REAL DATA</span>
+        </div>
+        <div class="pe-line-cap">Cumulative rent increase</div>
+        <svg class="pe-linechart" viewBox="0 0 600 320" role="img" aria-label="Line chart comparing cumulative rent increase in markets using RealPage versus other markets">
+          <!-- gridlines -->
+          <g stroke="#ddd" stroke-width="0.5" stroke-dasharray="3 3">
+            <line x1="60" y1="58"  x2="560" y2="58"/>
+            <line x1="60" y1="130" x2="560" y2="130"/>
+            <line x1="60" y1="200" x2="560" y2="200"/>
+            <line x1="60" y1="280" x2="560" y2="280"/>
+          </g>
+          <!-- y labels -->
+          <g fill="#8a857a" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">
+            <text x="52" y="62">40%</text>
+            <text x="52" y="134">30%</text>
+            <text x="52" y="204">15%</text>
+            <text x="52" y="284">0%</text>
+          </g>
+          <!-- event markers -->
+          <g stroke="#bbb" stroke-width="1" stroke-dasharray="4 4">
+            <line x1="268" y1="40" x2="268" y2="280"/>
+            <line x1="477" y1="40" x2="477" y2="280"/>
+            <line x1="560" y1="40" x2="560" y2="280"/>
+          </g>
+          <g fill="#9a958a" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">
+            <text x="268" y="34">2017</text>
+            <text x="477" y="34">2022</text>
+            <text x="560" y="34">2024</text>
+          </g>
+          <!-- other markets (teal) -->
+          <polyline fill="none" stroke="#06B6A0" stroke-width="2.5" points="60,280 310,258 560,236"/>
+          <!-- RealPage markets (red) -->
+          <polyline fill="none" stroke="#E63946" stroke-width="3" points="60,280 143,263 227,241 268,224 352,180 435,130 477,108 560,58"/>
+          <!-- x labels -->
+          <g fill="#8a857a" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">
+            <text x="60"  y="300">2012</text>
+            <text x="227" y="300">2016</text>
+            <text x="394" y="300">2020</text>
+            <text x="560" y="300">2024</text>
+          </g>
+          <!-- inline legend -->
+          <g font-family="Inter, sans-serif" font-size="12">
+            <text x="570" y="58"  fill="#E63946" text-anchor="end" font-weight="700">RealPage markets</text>
+            <text x="570" y="232" fill="#06B6A0" text-anchor="end" font-weight="700">Other markets</text>
+          </g>
+        </svg>
+        <ul class="pe-events">
+          <li><span class="pe-ev-yr">2017</span> RealPage expands widely</li>
+          <li><span class="pe-ev-yr">2022</span> ProPublica investigation</li>
+          <li><span class="pe-ev-yr">2024</span> DOJ files suit</li>
+          <li><span class="pe-ev-yr">2025</span> DOJ settlement, three years of oversight</li>
+        </ul>
+        <p class="pe-fig-note">Seattle case. Rents rose 33% in one year and 42% in total since 2012. The class action estimates RealPage markets run 5 to 7% above competitive markets.</p>
+      </figure>
+      <div class="pe-fig-read">
+        <p>In the U.S. Department of Justice complaint against RealPage filed in 2024, one landlord is quoted directly. Within a week of adopting RealPage software we started raising rents, and within 11 months we raised them by more than 25%.</p>
+        <p>A ProPublica investigation found that in parts of Seattle, 10 landlords controlled 70% of the apartments, and every one of them used RealPage. The class action estimates that markets using the algorithm have rents 5 to 7% higher than competitive markets. In November 2025, RealPage settled with the DOJ and accepted three years of oversight.</p>
+      </div>
+    </div>
+
+    <hr class="pe-sep">
+
+    <!-- Figure 4 · Consumer surplus transfer (concept) -->
+    <div class="pe-fig reveal">
+      <figure class="pe-figure">
+        <div class="pe-fig-head">
+          <span class="pe-fig-title">Figure 4 &middot; How consumer surplus gets transferred</span>
+          <span class="pe-badge pe-badge-concept">CONCEPT</span>
+        </div>
+        <div class="pe-line-cap">Where the value goes</div>
+        <div class="pe-stack">
+          <div class="pe-stack-col">
+            <div class="pe-stack-bar">
+              <div class="pe-stack-seg seg-profit" style="height:30%"><span>Company profit</span></div>
+              <div class="pe-stack-seg seg-surplus" style="height:70%"><span>Consumer surplus</span></div>
+            </div>
+            <div class="pe-stack-name">Traditional pricing<br><span>profit up 0.25%</span></div>
+          </div>
+          <div class="pe-stack-arrow"><span class="pe-stack-arrow-label">13% of value moves</span></div>
+          <div class="pe-stack-col">
+            <div class="pe-stack-bar">
+              <div class="pe-stack-seg seg-profit" style="height:65%"><span>Company profit</span></div>
+              <div class="pe-stack-seg seg-surplus" style="height:35%"><span>Consumer surplus</span></div>
+            </div>
+            <div class="pe-stack-name">Algorithmic pricing<br><span>profit up 13%</span></div>
+          </div>
+        </div>
+        <p class="pe-fig-note">Shiller, 2020. Personalized pricing lifts company profit about 52 times more than traditional demographic pricing.</p>
+      </figure>
+      <div class="pe-fig-read">
+        <p>Under traditional pricing, consumers keep some surplus. If you would pay $20 but only pay $12, that $8 is your surplus. The goal of personalized pricing is to take that $8.</p>
+        <p>Shiller's 2020 research shows that personalized pricing based on browsing history can raise company profit by 13%, while traditional pricing based on demographics raises it by only 0.25%. That extra 13% does not appear from nowhere. It comes directly from the surplus that used to belong to consumers.</p>
+      </div>
+    </div>
+
+    <hr class="pe-sep">
+
+    <p class="pe-cost-close">These four figures show four sides of the same thing. The algorithm is not raising prices. It is redistributing value, from the people who cannot see clearly to the companies that can.</p>
+  </section>
+
   <!-- ============ SOURCES ============ -->
   <section class="pe-sec pe-sources reveal" aria-labelledby="pe-sources-h">
     <h3 id="pe-sources-h">Sources</h3>
     <ol class="pe-refs">
+      <li>Chen, M. Keith. Interview by Shankar Vedantam. "Your Brain on Uber." <em>Hidden Brain</em>, NPR, 17 May 2016.</li>
+      <li>Chen, M. Keith, and Michael Sheldon. "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform." <em>Proceedings of the 2016 ACM Conference on Economics and Computation</em>, ACM, 2016, p. 455.</li>
       <li>Federal Trade Commission. "FTC Surveillance Pricing 6(b) Study: Research Summaries &mdash; A Staff Perspective." January 2025.</li>
       <li>Kumar, Krish, et al. "Research Problem Statement." Unpublished manuscript, 2026.</li>
       <li>McBride, John. Quoted in "The smart AI behind effective airline revenue management." <em>PhocusWire</em>, 17 December 2024.</li>
       <li>Mone, A., et al. "AI Price Tags and Privacy: When Your Data Sets Your Price." <em>Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery</em>, vol. 16, no. 1, 2026, p. e70070.</li>
       <li>Shiller, Benjamin Reed. "Approximating Purchase Propensities and Reservation Prices from Broad Consumer Tracking." <em>International Economic Review</em>, vol. 61, no. 2, 2020, pp. 847&ndash;870.</li>
+      <li>United States Department of Justice et al. v. RealPage, Inc. et al. Civil Action No. 24-cv-710, M.D.N.C., 23 August 2024.</li>
+      <li>Vogell, Heather. "Rent Going Up? One Company's Algorithm Could Be Why." <em>ProPublica</em>, 15 October 2022.</li>
     </ol>
   </section>
 
@@ -236,6 +413,73 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
 
 .pe-reveal-block{margin-top:64px; padding-top:40px; border-top:1px solid var(--pe-line)}
 .pe-kicker{font-size:clamp(20px,3vw,26px)!important; font-weight:700; color:var(--pe-strong); margin-top:24px!important}
+
+/* ---------- Section 5 · The cost (figures) ---------- */
+.pe-sep{border:none; border-top:1px solid var(--pe-line); margin:64px 0}
+.pe-fig{margin:0}
+.pe-cost-close{font-size:clamp(20px,3vw,26px)!important; font-weight:600; color:var(--pe-strong); text-align:center; max-width:30ch; margin:8px auto 0!important; line-height:1.4}
+
+/* figure card: a fixed cream "paper" surface in both themes */
+.pe-figure{background:#F8F6F1; color:#2a2a2a; border:1px solid #e6e1d6; border-radius:14px; padding:28px; margin:0 0 22px}
+.pe-figure *{color:inherit}
+.pe-fig-head{display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:22px}
+.pe-fig-title{font-family:"Inter",sans-serif; font-weight:800; font-size:clamp(16px,2.4vw,20px); color:#1a1a1a}
+.pe-badge{font-family:"JetBrains Mono",monospace; font-size:11px; letter-spacing:.08em; padding:4px 10px; border-radius:999px; display:inline-flex; align-items:center; gap:6px; white-space:nowrap}
+.pe-badge::before{content:""; width:7px; height:7px; border-radius:50%; background:currentColor; display:inline-block}
+.pe-badge-real{color:#067a6c; background:rgba(6,182,160,.16)}
+.pe-badge-concept{color:#8a6a00; background:rgba(244,211,94,.28)}
+.pe-fig-read{margin:0 0 4px}
+.pe-fig-read p{font-size:15px!important; color:var(--pe-text); margin:0 0 12px}
+.pe-fig-note{font-family:"JetBrains Mono",monospace; font-size:11px!important; color:#7a756a!important; margin:18px 0 0!important; line-height:1.5}
+.pe-fig-kicker{font-weight:700; color:#1a1a1a!important; margin:18px 0 0!important; font-size:15px!important}
+
+/* Fig 1 · battery + quote */
+.pe-batt-row{display:flex; gap:22px; flex-wrap:wrap; justify-content:center; margin:8px 0 24px}
+.pe-batt{display:flex; flex-direction:column; align-items:center; gap:8px}
+.pe-batt-icon{position:relative; width:64px; height:30px; border:2px solid #2a2a2a; border-radius:6px; padding:3px; display:block}
+.pe-batt-icon::after{content:""; position:absolute; right:-7px; top:8px; width:4px; height:12px; background:#2a2a2a; border-radius:0 2px 2px 0}
+.pe-batt-fill{display:block; height:100%; border-radius:3px}
+.pe-batt-pct{font-family:"JetBrains Mono",monospace; font-size:13px; font-weight:700; color:#2a2a2a}
+.pe-quote{margin:0; padding:20px 22px; background:#fffdf8; border:1px solid #e6e1d6; border-radius:10px;
+  font-family:Georgia,"Times New Roman",serif; font-size:18px; font-style:italic; line-height:1.5; color:#1a1a1a}
+.pe-quote cite{display:block; margin-top:14px; font-style:normal; font-family:"JetBrains Mono",monospace; font-size:12px; color:#7a756a}
+.pe-facts{list-style:none; margin:20px 0 0; padding:0}
+.pe-facts li{position:relative; padding:6px 0 6px 24px; font-size:15px; color:#2a2a2a; border:none}
+.pe-facts li::before{content:""; position:absolute; left:2px; top:13px; width:8px; height:8px; border-radius:50%; background:#E63946}
+
+/* Fig 2 · bar chart */
+.pe-bars2-cap, .pe-line-cap{font-family:"JetBrains Mono",monospace; font-size:12px; color:#7a756a; margin-bottom:14px}
+.pe-bars2{display:flex; justify-content:center; align-items:flex-end; gap:64px; height:220px; padding:0 20px}
+.pe-bar2-col{display:flex; flex-direction:column; align-items:center; height:100%; justify-content:flex-end; gap:10px; width:120px}
+.pe-bar2-val{font-family:"JetBrains Mono",monospace; font-weight:700; font-size:18px; color:#1a1a1a}
+.pe-bar2-track{width:90px; height:160px; display:flex; align-items:flex-end}
+.pe-bar2{width:100%; border-radius:6px 6px 0 0; transition:height .6s cubic-bezier(.4,0,.2,1)}
+.pe-bar2-name{font-family:"Inter",sans-serif; font-weight:600; font-size:14px; color:#2a2a2a}
+
+/* Fig 3 · line chart */
+.pe-linechart{width:100%; height:auto; display:block}
+.pe-events{list-style:none; margin:20px 0 0; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:8px 24px}
+.pe-events li{font-size:13px; color:#2a2a2a; border:none; padding:0}
+.pe-ev-yr{font-family:"JetBrains Mono",monospace; font-weight:700; color:#E63946; margin-right:8px}
+
+/* Fig 4 · stacked concept */
+.pe-stack{display:flex; align-items:flex-end; justify-content:center; gap:0; height:280px; padding:0 10px}
+.pe-stack-col{display:flex; flex-direction:column; align-items:center; gap:12px; width:150px}
+.pe-stack-bar{width:96px; height:220px; display:flex; flex-direction:column; border-radius:6px; overflow:hidden}
+.pe-stack-seg{display:flex; align-items:center; justify-content:center; text-align:center; transition:height .6s cubic-bezier(.4,0,.2,1)}
+.pe-stack-seg span{font-family:"Inter",sans-serif; font-size:11px; font-weight:600; color:#fff; padding:0 4px; line-height:1.2}
+.seg-profit{background:#E63946}
+.seg-surplus{background:#06B6A0}
+.pe-stack-name{font-family:"Inter",sans-serif; font-weight:700; font-size:14px; color:#2a2a2a; text-align:center; line-height:1.3}
+.pe-stack-name span{font-family:"JetBrains Mono",monospace; font-weight:500; font-size:11px; color:#7a756a}
+.pe-stack-arrow{align-self:center; display:flex; flex-direction:column; align-items:center; padding:0 10px; min-width:120px}
+.pe-stack-arrow::after{content:""; width:100%; height:2px; background:#1a1a1a; position:relative}
+.pe-stack-arrow-label{font-family:"JetBrains Mono",monospace; font-size:12px; font-weight:700; color:#1a1a1a; margin-bottom:8px; text-align:center}
+@media(max-width:560px){
+  .pe-events{grid-template-columns:1fr}
+  .pe-stack{gap:0} .pe-stack-arrow{min-width:80px}
+  .pe-bars2{gap:36px}
+}
 
 /* ---------- Sources ---------- */
 .pe-sources{padding-top:48px; padding-bottom:120px}
