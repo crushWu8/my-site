@@ -285,6 +285,15 @@
     btn.addEventListener('click', function(){ apply(current() === 'light' ? 'dark' : 'light'); });
   })();
   </script>
+  <script>
+  (function(){
+    var nav = document.querySelector('.nav');
+    if(!nav) return;
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 24); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+  </script>
   <script>fetch('https://site-stats.crushwu8.workers.dev/api/track').catch(() => {});</script>
 </body>
 </html>

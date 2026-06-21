@@ -61,7 +61,10 @@ a:hover{text-decoration:underline}
 /* ===== Nav ===== */
 .nav{position:fixed; top:18px; right:36px; z-index:10; font-size:18px; letter-spacing:.3px;
   display:flex; align-items:center; padding:9px 20px; border-radius:999px;
-  background:var(--nav-bg); border:1px solid var(--nav-border);
+  background:transparent; border:1px solid transparent; box-shadow:none;
+  transition:background-color .3s ease, border-color .3s ease, box-shadow .3s ease, backdrop-filter .3s ease}
+.nav.scrolled{
+  background:var(--nav-bg); border-color:var(--nav-border);
   -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
   box-shadow:0 6px 20px rgba(0,0,0,.18)}
 .nav a{margin-left:26px}
