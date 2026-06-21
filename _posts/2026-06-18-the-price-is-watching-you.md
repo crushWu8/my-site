@@ -63,7 +63,7 @@ excerpt: In 1985, four things decided the price of a plane ticket. In 2026, it's
   <section class="pe-sec pe-portrait reveal" aria-labelledby="pe-portrait-h">
     <h2 id="pe-portrait-h">So, what's your price?</h2>
     <p>The algorithm isn't deciding how much to charge <em>you</em>. It's deciding how much to charge <em>someone like you</em>. And "someone like you" is assembled from your device, location, time, and behavior. Each signal looks harmless on its own. Stacked together, they sketch a portrait, and that portrait sets the price you see.</p>
-    <p>Flip the five switches below and see what your portrait is worth.</p>
+    <p>Flip the five switches below and see how your profile can change the price.</p>
     <p class="pe-foot-note">The percentages below are illustrative, not any company's actual pricing formula. They show how small personal signals can add up to a larger price difference. Real pricing algorithms are often hidden from consumers.</p>
 
     <div class="pe-calc">
