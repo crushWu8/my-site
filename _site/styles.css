@@ -16,6 +16,8 @@
   --shadow:0 10px 30px rgba(0,0,0,.35);
   --particle:180,200,230;
   --particle-line:100,160,255;
+  --nav-bg:rgba(0,0,0,.62);
+  --nav-border:rgba(255,255,255,.10);
   --map-land:#3a4458;
   --map-stroke:#566173;
   --map-marker:#3b82f6;
@@ -38,6 +40,8 @@
   --shadow:0 10px 30px rgba(0,0,0,.08);
   --particle:80,110,150;
   --particle-line:60,110,200;
+  --nav-bg:rgba(255,255,255,.72);
+  --nav-border:rgba(0,0,0,.08);
   --map-land:#cdd5e0;
   --map-stroke:#aab3c0;
   --map-marker:#2563eb;
@@ -55,8 +59,13 @@ a{color:var(--link); text-decoration:none}
 a:hover{text-decoration:underline}
 
 /* ===== Nav ===== */
-.nav{position:fixed; top:18px; right:36px; z-index:10; font-size:18px; letter-spacing:.3px}
+.nav{position:fixed; top:18px; right:36px; z-index:10; font-size:18px; letter-spacing:.3px;
+  display:flex; align-items:center; padding:9px 20px; border-radius:999px;
+  background:var(--nav-bg); border:1px solid var(--nav-border);
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:0 6px 20px rgba(0,0,0,.18)}
 .nav a{margin-left:26px}
+.nav a:first-child{margin-left:0}
 .nav a[aria-current="page"]{text-decoration:underline; text-underline-offset:4px}
 .theme-toggle{
   margin-left:26px; padding:0; background:none; border:none; cursor:pointer;
